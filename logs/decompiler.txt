@@ -1,0 +1,506 @@
+[1/10] C:\Users\Robby\Documents\bin\workdir\game-hacking\dota2-minify\build\panorama\styles\chat.vcss_c
+--- Dump written to "C:\Users\Robby\Documents\bin\workdir\game-hacking\dota2-minify\build\panorama\styles\chat.css"
+	Resource Type: PanoramaStyle [Version 3] [Header Version: 12]
+	File Size: 56942 bytes
+
+
+--- Resource External Refs: ---
+	Id:               Resource Name:                                  
+	3D14559D1ABCA325  panorama/images/control_icons/arrow_dropdown_png.vtex
+	D97C628B94FFCCE5  panorama/images/control_icons/arrow_solid_down_png.vtex
+	DF6067FD3210B1E3  panorama/images/control_icons/arrow_solid_up_png.vtex
+	44206E273F816FCE  panorama/images/control_icons/bell_psd.vtex     
+	CF9F0802B52F6223  panorama/images/control_icons/broadcast_nolines_psd.vtex
+	7DB5D11A220B2856  panorama/images/control_icons/broadcast_psd.vtex
+	C4A2430A0C5DC0AF  panorama/images/control_icons/check_png.vtex    
+	80D324B8EEBCCAC9  panorama/images/control_icons/emoticon_icon_psd.vtex
+	661BA488FE3564DF  panorama/images/control_icons/plus_thin_png.vtex
+	4C2C85B156AB37EA  panorama/images/control_icons/share_profile_psd.vtex
+	5CBBDE92BA8C915C  panorama/images/control_icons/whisper_off_psd.vtex
+	6D27FF3D3E44460F  panorama/images/control_icons/whisper_on_psd.vtex
+	32CE32DBA27A7F05  panorama/images/hud/guide_icon_psd.vtex         
+	4FDA0465273025A9  panorama/images/hud/moderator_icon_psd.vtex     
+	375DACA23348124A  panorama/images/hud/sprout_icon_psd.vtex        
+	1F6540559D455DE6  panorama/images/masks/chat_preview_opacity_mask_png.vtex
+	1D166AB4F4760EBC  panorama/images/masks/hudchat_mask_psd.vtex     
+
+
+--- (No Deferred Resource References Found)
+
+
+--- Resource Blocks: Count 4 ---
+	-- Block: RERL  Size: 1121   bytes [Offset:     64]
+	-- Block: RED2  Size: 1944   bytes [Offset:   1200]
+	-- Block: DATA  Size: 26492  bytes [Offset:   3152]
+	-- Block: SrMa  Size: 27294  bytes [Offset:  29648]
+[2/10] C:\Users\Robby\Documents\bin\workdir\game-hacking\dota2-minify\build\panorama\styles\dashboard_page_post_game.vcss_c
+--- Dump written to "C:\Users\Robby\Documents\bin\workdir\game-hacking\dota2-minify\build\panorama\styles\dashboard_page_post_game.css"
+	Resource Type: PanoramaStyle [Version 3] [Header Version: 12]
+	File Size: 294270 bytes
+
+
+--- Resource External Refs: ---
+	Id:               Resource Name:                                  
+	73D3173A274EF964  panorama/images/backgrounds/aghs_postgameherobackground_psd.vtex
+	AE7455CBD6D99E63  panorama/images/backgrounds/postgameherobackground_dire_psd.vtex
+	8DFF716DBDD12AC4  panorama/images/backgrounds/postgameherobackground_psd.vtex
+	342D0DD9C4EAD8D3  panorama/images/bot_icon_easy_png.vtex          
+	3A0F4D7F0EFBCCC0  panorama/images/bot_icon_hard_png.vtex          
+	15E595026D12AB6F  panorama/images/bot_icon_medium_png.vtex        
+	E5F2288898DA6906  panorama/images/bot_icon_npx_png.vtex           
+	21B91C6D4F8C127C  panorama/images/bot_icon_passive_png.vtex       
+	9040F7462ACFC415  panorama/images/bot_icon_unfair_png.vtex        
+	438C7D1D0D2D722B  panorama/images/coaching/coach_icon_png.vtex    
+	582B9562BB962DD5  panorama/images/compendium/international2020/wriath_king_arcana/emblem_noflame_png.vtex
+	C3ACE43FA169BA7F  panorama/images/conduct/commend_star_png.vtex   
+	3A4288AC9990D8D9  panorama/images/conduct/report_flag_png.vtex    
+	B95A1483C5978D08  panorama/images/control_icons/arrow_left_png.vtex
+	DF6067FD3210B1E3  panorama/images/control_icons/arrow_solid_up_png.vtex
+	C17704778CB1272B  panorama/images/control_icons/battlepass_logo_grayscale_small_png.vtex
+	866B9CEA6ACF2EED  panorama/images/control_icons/bp2019_jungle_icon_png.vtex
+	6DB1B7063C6114EB  panorama/images/control_icons/bp2019_mvp_icon_png.vtex
+	92CBF7C3B0F62BC0  panorama/images/control_icons/bp2020_cavern_icon_png.vtex
+	69C8D081A0F2469A  panorama/images/control_icons/bp2020_gauntlet_icon_png.vtex
+	FE5533794BB95F3E  panorama/images/control_icons/eye_visibility_deselect_psd.vtex
+	C2B56AD2CF01827A  panorama/images/control_icons/eye_visibility_psd.vtex
+	34DCA3399B6313B8  panorama/images/control_icons/hero_progress_icon_png.vtex
+	FDD277781D8144CF  panorama/images/control_icons/match_progress_icon_psd.vtex
+	574BF9C028D8082F  panorama/images/control_icons/newbloom_2019_post_game_progress_icon_psd.vtex
+	D5A6A0F14F3B0F2C  panorama/images/control_icons/party_finder_icon_add_png.vtex
+	0E8879D3AC84AEEF  panorama/images/control_icons/player_match_survey_icon_png.vtex
+	95C5CD6299FF3862  panorama/images/control_icons/plus_png.vtex     
+	0DB68101091ED4FA  panorama/images/control_icons/random_dice_psd.vtex
+	55DE1BF3EB4F26A8  panorama/images/control_icons/relic_progress_icon_png.vtex
+	B86F343405D0262A  panorama/images/control_icons/rubick_arcana_post_game_progress_icon_png.vtex
+	F8CE3388D60A9037  panorama/images/control_icons/star_favorite_psd.vtex
+	A3227102C9B89A72  panorama/images/control_icons/star_favorite_selected_psd.vtex
+	FEB54C3E3691AE1F  panorama/images/control_icons/wraith_king_arcana_post_game_progress_icon_png.vtex
+	0EC7391A509F00DD  panorama/images/events/aghanim/aghanims_blessings_png.vtex
+	11DC80DA32434335  panorama/images/events/diretide/2020/icon_pumpkin_psd.vtex
+	5AA6EF4E16937F06  panorama/images/heroes/icons/npc_dota_hero_earthshaker_alt2_png.vtex
+	BA5D4550402D1063  panorama/images/heroes/icons/npc_dota_hero_juggernaut_alt2_png.vtex
+	12244724123A33A4  panorama/images/heroes/icons/npc_dota_hero_ogre_magi_alt2_png.vtex
+	84C139B50BE4D5D5  panorama/images/heroes/icons/npc_dota_hero_pudge_alt2_png.vtex
+	F57C0076899C753E  panorama/images/heroes/icons/npc_dota_hero_queenofpain_alt2_png.vtex
+	7EDD1A5A01AD488C  panorama/images/heroes/icons/npc_dota_hero_spectre_alt2_png.vtex
+	770A89FA9259B635  panorama/images/heroes/icons/npc_dota_hero_windrunner_alt2_png.vtex
+	2E219BB63ABF98B1  panorama/images/heroes/npc_dota_hero_lone_druid_png.vtex
+	3DAF79979EDCA055  panorama/images/heroes/npc_dota_hero_spirit_bear_png.vtex
+	7F2DB165D177A39F  panorama/images/hud/icon_camps_stacked_psd.vtex 
+	42219CD7589BD0E2  panorama/images/hud/icon_gold_psd.vtex          
+	9B724F0A4B6E9AB3  panorama/images/hud/player_mvp_crown_png.vtex   
+	EFC10ED1E2A522AD  panorama/images/hud/reborn/icon_damage_psd.vtex 
+	25372206B2F7928E  panorama/images/hud/reborn/icon_death_psd.vtex  
+	6DDA71B6221BAAE9  panorama/images/hud/reborn/icon_heal_psd.vtex   
+	5B5A780D186E15C2  panorama/images/icon_thumb_down_png.vtex        
+	57C73019AE06D7EB  panorama/images/icon_thumb_up_png.vtex          
+	314BB8C097EC4CFA  panorama/images/masks/softedge_box_irregular_png.vtex
+	4C72EB59CABF77B3  panorama/images/masks/softedge_circle_png.vtex  
+	7505172F38FEEAE8  panorama/images/masks/softedge_vertical_softer_png.vtex
+	3901503ED0149F97  panorama/images/masks/wk_arc_seal_psd.vtex      
+	BF7BA62744B07E9D  panorama/images/post_game_party_index_1_psd.vtex
+	5B705B224186B963  panorama/images/post_game_party_index_2_psd.vtex
+	9FD2FDBC3C8D4B26  panorama/images/post_game_party_index_3_psd.vtex
+	501D40C8E4B23BE4  panorama/images/post_game_party_index_4_psd.vtex
+	3903E0D82DAB7048  panorama/images/status_icons/stackeditems_1_psd.vtex
+	A5F51FC97B208167  panorama/images/status_icons/stackeditems_2_psd.vtex
+	79E7C1FD141E30D6  panorama/images/status_icons/stackeditems_3_psd.vtex
+	9BF665D71340B938  panorama/images/team_icons/dire_png.vtex        
+	8CC26E422118C2B5  panorama/images/team_icons/radiant_png.vtex     
+	BEEF4803E7FEBACD  panorama/images/textures/minimap_game_png.vtex  
+	F71446351868544E  panorama/images/textures/minimap_hero_enemy_psd.vtex
+	B2D242F70F017DA8  panorama/images/textures/minimap_hero_team_psd.vtex
+	FC63B5ABA76DA91F  panorama/images/textures/performancebar_psd.vtex
+
+
+--- (No Deferred Resource References Found)
+
+
+--- Resource Blocks: Count 4 ---
+	-- Block: RERL  Size: 4949   bytes [Offset:     64]
+	-- Block: RED2  Size: 5108   bytes [Offset:   5024]
+	-- Block: DATA  Size: 150211 bytes [Offset:  10144]
+	-- Block: SrMa  Size: 133902 bytes [Offset: 160368]
+[3/10] C:\Users\Robby\Documents\bin\workdir\game-hacking\dota2-minify\build\panorama\styles\dashboard_page_watch_live.vcss_c
+--- Dump written to "C:\Users\Robby\Documents\bin\workdir\game-hacking\dota2-minify\build\panorama\styles\dashboard_page_watch_live.css"
+	Resource Type: PanoramaStyle [Version 3] [Header Version: 12]
+	File Size: 38069 bytes
+
+
+--- Resource External Refs: ---
+	Id:               Resource Name:                                  
+	625429B7E4A9733D  panorama/images/control_icons/camera_png.vtex   
+	BA8CA85B9EC0ACEA  panorama/images/control_icons/clock_psd.vtex    
+	B308761BBF927E4A  panorama/images/control_icons/icon_search_png.vtex
+	B9083FE141000B34  panorama/images/icon_mmr_small_png.vtex         
+	34B69B38FCFEB0C3  panorama/images/minimap/dotamap_psd.vtex        
+	3D1962C4D923AB68  panorama/images/status_icons/dota_generic_psd.vtex
+	9CECE0ED62AFCEB2  panorama/images/status_icons/proplayer_psd.vtex 
+	ABCBB77A84959C35  panorama/images/textures/dotamap683_psd.vtex    
+
+
+--- (No Deferred Resource References Found)
+
+
+--- Resource Blocks: Count 4 ---
+	-- Block: RERL  Size: 503    bytes [Offset:     64]
+	-- Block: RED2  Size: 1516   bytes [Offset:    576]
+	-- Block: DATA  Size: 17000  bytes [Offset:   2096]
+	-- Block: SrMa  Size: 18965  bytes [Offset:  19104]
+[4/10] C:\Users\Robby\Documents\bin\workdir\game-hacking\dota2-minify\build\panorama\styles\play.vcss_c
+--- Dump written to "C:\Users\Robby\Documents\bin\workdir\game-hacking\dota2-minify\build\panorama\styles\play.css"
+	Resource Type: PanoramaStyle [Version 3] [Header Version: 12]
+	File Size: 219870 bytes
+
+
+--- Resource External Refs: ---
+	Id:               Resource Name:                                  
+	87B9AF8FA1151950  panorama/images/backgrounds/background_play_button_2x_png.vtex
+	0AC09FBD4801EE33  panorama/images/cancel_search_png.vtex          
+	6E99AEB2518453B1  panorama/images/compendium/international2019/morokai_play_bg_png.vtex
+	783D246B77BB1032  panorama/images/compendium/international2020/compendium/gauntlet_btn_bg_png.vtex
+	10F9CBBE2C98591D  panorama/images/compendium/international2020/compendium/gauntlet_check_png.vtex
+	F56F1B138B1A4F24  panorama/images/compendium/international2020/compendium/gauntlet_playmenu_psd.vtex
+	0A1232B85638396D  panorama/images/compendium/international2020/compendium/gauntlet_x_png.vtex
+	232E1B831B692824  panorama/images/compendium/spring2016/treecutter_psd.vtex
+	4F0FF478493FC963  panorama/images/control_icons/arrow_solid_right_png.vtex
+	E2FED5FAC90FB65D  panorama/images/control_icons/check_gradient_png.vtex
+	B240CA5756571A5A  panorama/images/control_icons/double_arrow_left_png.vtex
+	8282CD212185319C  panorama/images/control_icons/expand_collapse_png.vtex
+	6EA305DD9E8E92EA  panorama/images/control_icons/icon_collapse_png.vtex
+	12D6AE3DE7396C68  panorama/images/control_icons/icon_info_png.vtex
+	B308761BBF927E4A  panorama/images/control_icons/icon_search_png.vtex
+	4F9E06123BAE0E3C  panorama/images/control_icons/plus_gradient_png.vtex
+	661BA488FE3564DF  panorama/images/control_icons/plus_thin_png.vtex
+	F8CE3388D60A9037  panorama/images/control_icons/star_favorite_psd.vtex
+	2C60DECC751744F6  panorama/images/control_icons/x_close_gradient_png.vtex
+	0EC7391A509F00DD  panorama/images/events/aghanim/aghanims_blessings_png.vtex
+	DDB493D78549305E  panorama/images/events/aghanim/aghs_ink_png.vtex
+	7A57D6DD9A92CD38  panorama/images/events/aghanim/ascension_1_png.vtex
+	5128AB08FFEB94CB  panorama/images/events/aghanim/ascension_2_png.vtex
+	69F8E912DB72F33A  panorama/images/events/aghanim/ascension_3_png.vtex
+	A00DA0915EBD219F  panorama/images/events/aghanim/ascension_4_png.vtex
+	56752915FC10104D  panorama/images/events/aghanim/challenge_png.vtex
+	06300730A0FF356E  panorama/images/events/aghanim/difficulty_1_png.vtex
+	64CB062A8D31DAF6  panorama/images/events/aghanim/difficulty_2_png.vtex
+	4FB3E6EB2E8D254C  panorama/images/events/aghanim/difficulty_3_png.vtex
+	C682AF9BF87130F5  panorama/images/events/aghanim/difficulty_4_png.vtex
+	AFFE45054797AB5A  panorama/images/events/aghanim/difficulty_5_png.vtex
+	B32066E713502E80  panorama/images/events/diretide/2020/diretide_logo_cn_psd.vtex
+	7CD3EE642D7E5654  panorama/images/events/diretide/2020/diretide_logo_en_psd.vtex
+	357FBFDF6A8D56E1  panorama/images/events/diretide/2020/diretide_logo_ru_psd.vtex
+	310CC7387EAE4F78  panorama/images/events/diretide/2020/diretide_play_bg_psd.vtex
+	C7CC660F24EEB159  panorama/images/events/diretide/2020/rosh_cookie_bite_psd.vtex
+	E0EFD2039D130E70  panorama/images/events/diretide/2020/rosh_cookie_mask_psd.vtex
+	3114DC73AD673AF0  panorama/images/events/diretide/2020/rosh_cookie_whole_psd.vtex
+	EB9CAE8B149F885B  panorama/images/events/diretide/candycount_png.vtex
+	7C8CAD84F4D6A628  panorama/images/events/diretide/chat_line_png.vtex
+	F8633EFB06C8D5C4  panorama/images/events/diretide/emoticon_png.vtex
+	58A36A3DE2F6959F  panorama/images/events/diretide/spray_png.vtex  
+	9ADE62E5A343FED7  panorama/images/events/nemestice/button_backer_psd.vtex
+	850CC1F3EB41A4B1  panorama/images/events/nemestice/nemestice_logo_mask_cn_psd.vtex
+	CCD7081C7F842166  panorama/images/events/nemestice/nemestice_logo_mask_en_psd.vtex
+	AE217029C48E2AC0  panorama/images/events/nemestice/nemestice_logo_mask_ru_psd.vtex
+	D58144F79C10F0CF  panorama/images/events/nemestice/nemestice_logo_nobp_cn_psd.vtex
+	8850B439A49A06A1  panorama/images/events/nemestice/nemestice_logo_nobp_en_psd.vtex
+	6A856E5F25E1363E  panorama/images/events/nemestice/nemestice_logo_nobp_ru_psd.vtex
+	43C7957050AE574C  panorama/images/events/nemestice/nemestice_play_bg_psd.vtex
+	6656F20139F59BC4  panorama/images/front_page/ads/ti8/underhollow_psd.vtex
+	CD8EF5B0DA262BA5  panorama/images/game_modes/10v10_psd.vtex       
+	EA66B3A8A8F98B33  panorama/images/game_modes/ability_draft_psd.vtex
+	81FBD0562C4F7B0D  panorama/images/game_modes/all_pick_psd.vtex    
+	60510479699C23C0  panorama/images/game_modes/all_random_psd.vtex  
+	2D4BBAB6B00BD297  panorama/images/game_modes/ardm_psd.vtex        
+	9FC279EC191D4196  panorama/images/game_modes/colosseum_psd.vtex   
+	F3B7CC25B354F85A  panorama/images/game_modes/dark_moon_psd.vtex   
+	1B65149936271611  panorama/images/game_modes/featured_bg_psd.vtex 
+	2647EEFC6F83110B  panorama/images/game_modes/overthrow_psd.vtex   
+	782268E9226448E7  panorama/images/game_modes/random_draft_psd.vtex
+	54E8EAD9D3293B4D  panorama/images/game_modes/single_draft_psd.vtex
+	CC44EA287674619A  panorama/images/game_modes/turbo_psd.vtex       
+	633B3DD3A9A1826F  panorama/images/icon_info_png.vtex              
+	606B17E2795D4B44  panorama/images/icon_mmr_medium_png.vtex        
+	731178B0084A2877  panorama/images/masks/gradient_rightleft_png.vtex
+	314BB8C097EC4CFA  panorama/images/masks/softedge_box_irregular_png.vtex
+	4C420DD088C016F5  panorama/images/masks/softedge_box_png.vtex     
+	BA7B39F8838DA60F  panorama/images/rank_tier_icons/handicap/hardsupporticon_psd.vtex
+	5AC62DF5F6C9171B  panorama/images/rank_tier_icons/handicap/midlaneicon_psd.vtex
+	BACC717603006D43  panorama/images/rank_tier_icons/handicap/offlaneicon_psd.vtex
+	E5B73D1ABA9A7D10  panorama/images/rank_tier_icons/handicap/safelaneicon_psd.vtex
+	E61FC4914F2D9FBA  panorama/images/rank_tier_icons/handicap/softsupporticon_psd.vtex
+	556366F7E8CC4303  panorama/images/rank_tier_icons/star_shadow_png.vtex
+	AEC068DDFC1EACA2  panorama/images/rank_tier_icons/star_yellow_png.vtex
+	391627490B14EBD5  panorama/images/status_icons/information_psd.vtex
+	4DF617F7691EDE70  panorama/images/textures/playtabbg_1v1_psd.vtex 
+	492E0695338AE918  panorama/images/textures/playtabbg_aghanim_psd.vtex
+	8DA26E9329BC5CE9  panorama/images/textures/playtabbg_bots_psd.vtex
+	97471B4468809469  panorama/images/textures/playtabbg_diretide2020_psd.vtex
+	1D137738962F6B36  panorama/images/textures/playtabbg_frostivus_psd.vtex
+	4C358E9063E8086F  panorama/images/textures/playtabbg_mutations_psd.vtex
+	0D33DD370DE71A33  panorama/images/textures/playtabbg_normal_psd.vtex
+	D06870723A810D6E  panorama/images/textures/playtabbg_ranked_psd.vtex
+	9C2903BCDDCBAA23  panorama/images/textures/playtabbg_siltbreaker_psd.vtex
+	DF0E6759E98DB1B3  panorama/images/textures/playtabbg_spring2021_psd.vtex
+	771A16205D5E710A  panorama/images/tooltips/wizards/wizard_hill_intro_01_fade_psd.vtex
+	E186CB4364C5A6B7  panorama/images/weekend_tourney/battle_cup_return_psd.vtex
+	A2F6DADCCC912C9D  panorama/images/weekend_tourney/battle_cup_tooltip_backer_play_psd.vtex
+
+
+--- (No Deferred Resource References Found)
+
+
+--- Resource Blocks: Count 4 ---
+	-- Block: RERL  Size: 6380   bytes [Offset:     64]
+	-- Block: RED2  Size: 6020   bytes [Offset:   6448]
+	-- Block: DATA  Size: 104545 bytes [Offset:  12480]
+	-- Block: SrMa  Size: 102830 bytes [Offset: 117040]
+[5/10] C:\Users\Robby\Documents\bin\workdir\game-hacking\dota2-minify\build\panorama\styles\profile_card.vcss_c
+--- Dump written to "C:\Users\Robby\Documents\bin\workdir\game-hacking\dota2-minify\build\panorama\styles\profile_card.css"
+	Resource Type: PanoramaStyle [Version 3] [Header Version: 12]
+	File Size: 43922 bytes
+
+
+--- Resource External Refs: ---
+	Id:               Resource Name:                                  
+	A4C3D8F0EB84F80A  panorama/images/compendium/international2020/compendium/profiletooltip_bronze_png.vtex
+	A0BDC945F8041029  panorama/images/compendium/international2020/compendium/profiletooltip_gold_png.vtex
+	48769EA268524EEA  panorama/images/compendium/international2020/compendium/profiletooltip_silver_png.vtex
+	C6B17E33089740A2  panorama/images/control_icons/arrow_dropdown_green_png.vtex
+	6E8701295DBC6F44  panorama/images/dpc/badge/banner_bg_tier1_png.vtex
+	E9585F89806E58C7  panorama/images/dpc/badge/banner_bg_tier2_png.vtex
+	792529C2A58F1149  panorama/images/dpc/badge/banner_bg_tier3_png.vtex
+	E8532B4A2CB7BBB9  panorama/images/masks/softedge_circle_sharp_png.vtex
+	BD6D4F3A7A05077F  panorama/images/textures/miniprofile_badge_bg_psd.vtex
+	4195EB7A24C8B229  panorama/images/textures/miniprofile_compendium_bg_psd.vtex
+	D631D8E726C6EC21  panorama/images/textures/miniprofile_rock_psd.vtex
+	74316100934BD297  panorama/images/weekend_tourney/battle_cup_profile_backer_champions_fall_psd.vtex
+	2587EE224520F884  panorama/images/weekend_tourney/battle_cup_profile_backer_psd.vtex
+	5B4CCC4EF53B09AC  panorama/images/weekend_tourney/battle_cup_tooltip_backer_champions_fall_psd.vtex
+	B68FC75466CAA684  panorama/images/weekend_tourney/battle_cup_tooltip_backer_psd.vtex
+
+
+--- (No Deferred Resource References Found)
+
+
+--- Resource Blocks: Count 4 ---
+	-- Block: RERL  Size: 1237   bytes [Offset:     64]
+	-- Block: RED2  Size: 1959   bytes [Offset:   1312]
+	-- Block: DATA  Size: 19764  bytes [Offset:   3280]
+	-- Block: SrMa  Size: 20866  bytes [Offset:  23056]
+[6/10] C:\Users\Robby\Documents\bin\workdir\game-hacking\dota2-minify\build\panorama\styles\ui_rank_badge.vcss_c
+--- Dump written to "C:\Users\Robby\Documents\bin\workdir\game-hacking\dota2-minify\build\panorama\styles\ui_rank_badge.css"
+	Resource Type: PanoramaStyle [Version 3] [Header Version: 12]
+	File Size: 4044 bytes
+
+
+--- Resource External Refs: ---
+	Id:               Resource Name:                                  
+	314BB8C097EC4CFA  panorama/images/masks/softedge_box_irregular_png.vtex
+
+
+--- (No Deferred Resource References Found)
+
+
+--- Resource Blocks: Count 4 ---
+	-- Block: RERL  Size: 78     bytes [Offset:     64]
+	-- Block: RED2  Size: 963    bytes [Offset:    144]
+	-- Block: DATA  Size: 1442   bytes [Offset:   1120]
+	-- Block: SrMa  Size: 1468   bytes [Offset:   2576]
+[7/10] C:\Users\Robby\Documents\bin\workdir\game-hacking\dota2-minify\build\panorama\styles\watch_live_game_row.vcss_c
+--- Dump written to "C:\Users\Robby\Documents\bin\workdir\game-hacking\dota2-minify\build\panorama\styles\watch_live_game_row.css"
+	Resource Type: PanoramaStyle [Version 3] [Header Version: 12]
+	File Size: 21753 bytes
+
+
+--- Resource External Refs: ---
+	Id:               Resource Name:                                  
+	314BB8C097EC4CFA  panorama/images/masks/softedge_box_irregular_png.vtex
+	E9208CB195379ED2  panorama/images/minimap/background_png.vtex     
+	5FA4A69FDA88E63B  panorama/images/minimap/dire_bot_base_png.vtex  
+	3177E10FDA75D2F8  panorama/images/minimap/dire_bot_tier1_png.vtex 
+	0BCA8071436272FA  panorama/images/minimap/dire_bot_tier2_png.vtex 
+	E3288D8A23ACEB67  panorama/images/minimap/dire_mid_base_png.vtex  
+	8C9A907E032974B9  panorama/images/minimap/dire_mid_tier1_png.vtex 
+	E28E1EE96964C20F  panorama/images/minimap/dire_mid_tier2_png.vtex 
+	ABBE75EF35BE372E  panorama/images/minimap/dire_top_base_png.vtex  
+	DDD0C667397165E8  panorama/images/minimap/dire_top_tier1_png.vtex 
+	835E753C6999BE1A  panorama/images/minimap/dire_top_tier2_png.vtex 
+	987DDB33A964345D  panorama/images/minimap/radiant_bot_base_png.vtex
+	4C69429B3B7437A3  panorama/images/minimap/radiant_bot_tier1_png.vtex
+	76E28665787CA79C  panorama/images/minimap/radiant_bot_tier2_png.vtex
+	EF61BAC8320A530F  panorama/images/minimap/radiant_mid_base_png.vtex
+	B840EB9F17803406  panorama/images/minimap/radiant_mid_tier1_png.vtex
+	C74984D4A0F9C3E9  panorama/images/minimap/radiant_mid_tier2_png.vtex
+	DF56BB8F56BBFDEB  panorama/images/minimap/radiant_top_base_png.vtex
+	661E6FC246901672  panorama/images/minimap/radiant_top_tier1_png.vtex
+	731993B799A1A56D  panorama/images/minimap/radiant_top_tier2_png.vtex
+	E3FE9E82DC4A3386  panorama/images/status_icons/friend_icon_psd.vtex
+	B1F806C698D1001D  panorama/images/status_icons/pro_icon_psd.vtex  
+
+
+--- (No Deferred Resource References Found)
+
+
+--- Resource Blocks: Count 4 ---
+	-- Block: RERL  Size: 1440   bytes [Offset:     64]
+	-- Block: RED2  Size: 2170   bytes [Offset:   1504]
+	-- Block: DATA  Size: 9755   bytes [Offset:   3680]
+	-- Block: SrMa  Size: 8313   bytes [Offset:  13440]
+[8/10] C:\Users\Robby\Documents\bin\workdir\game-hacking\dota2-minify\build\panorama\styles\hud\dota_hud_hero_picking_player.vcss_c
+--- Dump written to "C:\Users\Robby\Documents\bin\workdir\game-hacking\dota2-minify\build\panorama\styles\hud\dota_hud_hero_picking_player.css"
+	Resource Type: PanoramaStyle [Version 3] [Header Version: 12]
+	File Size: 37310 bytes
+
+
+--- Resource External Refs: ---
+	Id:               Resource Name:                                  
+	10D2D362AE221AA3  panorama/images/hud/drop_down_arrow_png.vtex    
+	32CE32DBA27A7F05  panorama/images/hud/guide_icon_psd.vtex         
+	42219CD7589BD0E2  panorama/images/hud/icon_gold_psd.vtex          
+	9B724F0A4B6E9AB3  panorama/images/hud/player_mvp_crown_png.vtex   
+	0B8CFDC1F95705FC  panorama/images/hud/reborn/icon_disconnect_png.vtex
+	375DACA23348124A  panorama/images/hud/sprout_icon_psd.vtex        
+	F808B7E7496CE293  panorama/images/masks/topbar_heropick_left_psd.vtex
+	95E84C43000156A7  panorama/images/masks/topbar_heroslant_left_inset_psd.vtex
+	D2D01630455B766C  panorama/images/masks/topbar_heroslant_left_psd.vtex
+	4B08D7514349730E  panorama/images/masks/topbar_heroslant_right_inset_psd.vtex
+	BEB021B5E22A1019  panorama/images/masks/topbar_heroslant_right_psd.vtex
+	3604A87993C81223  panorama/images/status_icons/captain_overlay_psd.vtex
+
+
+--- (No Deferred Resource References Found)
+
+
+--- Resource Blocks: Count 4 ---
+	-- Block: RERL  Size: 795    bytes [Offset:     64]
+	-- Block: RED2  Size: 1679   bytes [Offset:    864]
+	-- Block: DATA  Size: 17451  bytes [Offset:   2544]
+	-- Block: SrMa  Size: 17310  bytes [Offset:  20000]
+[9/10] C:\Users\Robby\Documents\bin\workdir\game-hacking\dota2-minify\build\panorama\styles\hud\dota_hud_top_bar.vcss_c
+--- Dump written to "C:\Users\Robby\Documents\bin\workdir\game-hacking\dota2-minify\build\panorama\styles\hud\dota_hud_top_bar.css"
+	Resource Type: PanoramaStyle [Version 3] [Header Version: 12]
+	File Size: 77299 bytes
+
+
+--- Resource External Refs: ---
+	Id:               Resource Name:                                  
+	ECCAE24D6C696BAB  panorama/images/dota_plus/currency_icon_png.vtex
+	1AABE8063A5E15BB  panorama/images/heroes/npc_dota_hero_allied_coach_psd.vtex
+	DC41FD812ACAD042  panorama/images/heroes/npc_dota_hero_enemy_coach_psd.vtex
+	A4BF574CAFADF556  panorama/images/hud/arcana/drow/drow_arcana_portrait_target_psd.vtex
+	10D2D362AE221AA3  panorama/images/hud/drop_down_arrow_png.vtex    
+	42219CD7589BD0E2  panorama/images/hud/icon_gold_psd.vtex          
+	4E98531E64A31AF4  panorama/images/hud/reborn/arrow_gold_dif_psd.vtex
+	36057013D873E81A  panorama/images/hud/reborn/bg_timer_psd.vtex    
+	D714B7DEB24F8A48  panorama/images/hud/reborn/buyback_topbar_alive_psd.vtex
+	506F2E70CAB830A3  panorama/images/hud/reborn/glow_day_psd.vtex    
+	998E2817A2C615F3  panorama/images/hud/reborn/glow_night_psd.vtex  
+	63EB30F34C32FAAC  panorama/images/hud/reborn/gold_small_psd.vtex  
+	CEBDAB553B13627F  panorama/images/hud/reborn/header_endcap_psd.vtex
+	0B8CFDC1F95705FC  panorama/images/hud/reborn/icon_disconnect_png.vtex
+	CCE513142871F384  panorama/images/hud/reborn/icon_moon_psd.vtex   
+	4079C3ED4EF82536  panorama/images/hud/reborn/icon_sun_psd.vtex    
+	19177751C56E49FC  panorama/images/hud/reborn/streaks/killstreak_style1_topbar_dire_psd.vtex
+	DB38CE6FAF34FC88  panorama/images/hud/reborn/streaks/killstreak_style1_topbar_psd.vtex
+	52484D5CAFE84A9D  panorama/images/hud/reborn/streaks/killstreak_style2_topbar_dire_psd.vtex
+	0EFE87F43DC4D1B2  panorama/images/hud/reborn/streaks/killstreak_style2_topbar_psd.vtex
+	9F0A219FC3A9BCE3  panorama/images/hud/reborn/streaks/killstreak_style3_topbar_dire_psd.vtex
+	8FFE65D5633FB733  panorama/images/hud/reborn/streaks/killstreak_style3_topbar_psd.vtex
+	D84D651A117CFFA0  panorama/images/hud/reborn/streaks/killstreak_style4_topbar_psd.vtex
+	3FD18DC6DA1D1E00  panorama/images/hud/reborn/top_bar_buyback_bg_psd.vtex
+	59B2D372E5651B32  panorama/images/hud/reborn/top_bar_hero_dire_badge_1_psd.vtex
+	327B7060F7C32425  panorama/images/hud/reborn/top_bar_hero_dire_badge_2_psd.vtex
+	4AAF6DFAFC9510B5  panorama/images/hud/reborn/top_bar_hero_dire_badge_3_psd.vtex
+	C37A428DEBDA54A1  panorama/images/hud/reborn/top_bar_hero_dire_badge_4_psd.vtex
+	7771E3CACC3961EA  panorama/images/hud/reborn/top_bar_hero_dire_badge_5_psd.vtex
+	7A0BB4BE9152FE96  panorama/images/hud/reborn/top_bar_hero_dire_badge_6_psd.vtex
+	943032007D4E22C0  panorama/images/hud/reborn/top_bar_hero_radiant_badge_1_psd.vtex
+	DE7AD618742B0EC5  panorama/images/hud/reborn/top_bar_hero_radiant_badge_2_psd.vtex
+	C9804B4230D41CA4  panorama/images/hud/reborn/top_bar_hero_radiant_badge_3_psd.vtex
+	0020811C147FF9BD  panorama/images/hud/reborn/top_bar_hero_radiant_badge_4_psd.vtex
+	1EF2D618E1210AA5  panorama/images/hud/reborn/top_bar_hero_radiant_badge_5_psd.vtex
+	2D69E64E495E9A96  panorama/images/hud/reborn/top_bar_hero_radiant_badge_6_psd.vtex
+	48F51F84AA9618A9  panorama/images/hud/reborn/top_bar_team_bg_psd.vtex
+	2EF28C2642535C2A  panorama/images/hud/reborn/topbar_buyback_psd.vtex
+	8B7EED7987C8368A  panorama/images/hud/reborn/topbar_health_colorblind_psd.vtex
+	71F8C7FD38CBAAD9  panorama/images/hud/reborn/topbar_health_dire_psd.vtex
+	8627A816183AA163  panorama/images/hud/reborn/topbar_health_psd.vtex
+	9206D1D0B38881AD  panorama/images/hud/reborn/topbar_mana_psd.vtex 
+	8858ABBFE9C84512  panorama/images/hud/reborn/topbar_playerslot_vignette_psd.vtex
+	CCC780A8AABFA7F9  panorama/images/hud/reborn/tournament_pip_off_psd.vtex
+	9497A1EA32E3D278  panorama/images/hud/reborn/tournament_pip_on_psd.vtex
+	CC543EBA36D17A93  panorama/images/hud/reborn/ult_cooldown_psd.vtex
+	29E119A99119AF67  panorama/images/hud/reborn/ult_no_mana_psd.vtex 
+	D309736B2B7CAF5B  panorama/images/hud/reborn/ult_ready_psd.vtex   
+	8C5E1A1129B436BF  panorama/images/items/topbar/aegis_bg_mask_psd.vtex
+	3699AA1AD91827E6  panorama/images/items/topbar/aegis_psd.vtex     
+	776E884E132F951F  panorama/images/items/topbar/cheese_psd.vtex    
+	0582F9F4D02F521F  panorama/images/items/topbar/smoke_of_deceit_mask_psd.vtex
+	83B3704B03F46AD9  panorama/images/items/topbar/smoke_of_deceit_portrait_mask_psd.vtex
+	D159BBE3292EBE9E  panorama/images/items/topbar/smoke_of_deceit_psd.vtex
+	9B0A577DD6BB1500  panorama/images/masks/softedge_box_sharper_png.vtex
+	D2D01630455B766C  panorama/images/masks/topbar_heroslant_left_psd.vtex
+	BEB021B5E22A1019  panorama/images/masks/topbar_heroslant_right_psd.vtex
+
+
+--- (No Deferred Resource References Found)
+
+
+--- Resource Blocks: Count 4 ---
+	-- Block: RERL  Size: 4152   bytes [Offset:     64]
+	-- Block: RED2  Size: 4140   bytes [Offset:   4224]
+	-- Block: DATA  Size: 37526  bytes [Offset:   8368]
+	-- Block: SrMa  Size: 31395  bytes [Offset:  45904]
+[10/10] C:\Users\Robby\Documents\bin\workdir\game-hacking\dota2-minify\build\panorama\styles\hud\hud_reborn.vcss_c
+--- Dump written to "C:\Users\Robby\Documents\bin\workdir\game-hacking\dota2-minify\build\panorama\styles\hud\hud_reborn.css"
+	Resource Type: PanoramaStyle [Version 3] [Header Version: 12]
+	File Size: 96391 bytes
+
+
+--- Resource External Refs: ---
+	Id:               Resource Name:                                  
+	E1A8335D5FF64726  panorama/images/hud/default/inventory/spacer_png.vtex
+	7550B492152CC23A  panorama/images/hud/international_bg_png.vtex   
+	9B046D0D9F5054DF  panorama/images/hud/portrait_hero_badge_frame_tier_1_psd.vtex
+	B1E32EEE7BE64579  panorama/images/hud/portrait_hero_badge_frame_tier_2_psd.vtex
+	A4C6797A165ECD09  panorama/images/hud/portrait_hero_badge_frame_tier_3_psd.vtex
+	610A1D973B365982  panorama/images/hud/portrait_hero_badge_frame_tier_4_psd.vtex
+	C0E803E4CD707F87  panorama/images/hud/portrait_hero_badge_frame_tier_5_psd.vtex
+	FFB2F7113FEC922C  panorama/images/hud/portrait_hero_badge_frame_tier_6_psd.vtex
+	FC03E2C90DB322CC  panorama/images/hud/portrait_muted_png.vtex     
+	A6E7DFE6DA73B061  panorama/images/hud/portrait_silenced_png.vtex  
+	D5B7EB9E8D8AFBFD  panorama/images/hud/reborn/ability_bg_dead_psd.vtex
+	B28B7CAFABFD7461  panorama/images/hud/reborn/ability_bg_psd.vtex  
+	A648CF5C3DE3A0EC  panorama/images/hud/reborn/ability_inset_shadow_psd.vtex
+	BF7CB1865D8208A2  panorama/images/hud/reborn/bg_minimap_psd.vtex  
+	67B49C1ECD89C425  panorama/images/hud/reborn/bg_neutral_slot_png.vtex
+	CD0BC71775169C5A  panorama/images/hud/reborn/bg_tp_slot_png.vtex  
+	073E61D3B29682BE  panorama/images/hud/reborn/courier_gold_bg_262_psd.vtex
+	7A163DC7AA1004CE  panorama/images/hud/reborn/glyph_scan_bg_psd.vtex
+	00F52F7111747BE6  panorama/images/hud/reborn/inventory_bg_psd.vtex
+	34395FD1934C4836  panorama/images/hud/reborn/right_flare_bg_psd.vtex
+	E50E19FAE9792B19  panorama/images/hud/reborn/side_flare_tall_psd.vtex
+	24E2006E2B325BE9  panorama/images/hud/reborn/statbranch_bg_nonhero_psd.vtex
+	E89F630680F630D5  panorama/images/hud/reborn/statbranch_button_bg_all_off_psd.vtex
+	6708B63C620CD3FA  panorama/images/hud/reborn/statbranch_button_bg_psd.vtex
+	B26723BBF5E11599  panorama/images/hud/reborn/statbranch_button_pip10_psd.vtex
+	DE309AFA425E12BD  panorama/images/hud/reborn/statbranch_button_pip15_psd.vtex
+	9EC8F25587C462FE  panorama/images/hud/reborn/statbranch_button_pip20_psd.vtex
+	D7A7CF6536A32F33  panorama/images/hud/reborn/statbranch_button_pip25_psd.vtex
+	03DB2DA86D94875E  panorama/images/hud/reborn/statbranch_pip_psd.vtex
+	1183AF6709344FF0  panorama/images/hud/reborn/statbranch_progress_mask_psd.vtex
+	98A2A925F2EB0CFA  panorama/images/hud/reborn/streaks/killstreak_style1_portrait_psd.vtex
+	FB430076A7A7F429  panorama/images/hud/reborn/streaks/killstreak_style2_portrait_psd.vtex
+	0E874EA56A0B4B9F  panorama/images/hud/reborn/streaks/killstreak_style3_portrait_psd.vtex
+	C856C67709F09599  panorama/images/hud/reborn/streaks/killstreak_style4_portrait_psd.vtex
+	62FB91DE7C539083  panorama/images/masks/portrait_side_blur_psd.vtex
+
+
+--- (No Deferred Resource References Found)
+
+
+--- Resource Blocks: Count 4 ---
+	-- Block: RERL  Size: 2557   bytes [Offset:     64]
+	-- Block: RED2  Size: 2939   bytes [Offset:   2624]
+	-- Block: DATA  Size: 48758  bytes [Offset:   5568]
+	-- Block: SrMa  Size: 42055  bytes [Offset:  54336]

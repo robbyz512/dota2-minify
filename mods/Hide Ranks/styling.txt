@@ -1,0 +1,7 @@
+panorama\styles\play @@ #RankDisplayContainer {visibility: collapse;}
+panorama\styles\hud\dota_hud_hero_picking_player @@ #PlayerRank {width: 0%;}
+panorama\styles\ui_rank_badge @@ .HasLeaderboardRank #RankLeaderboard{visibility: collapse;} #BackgroundFX {visibility: collapse;}
+panorama\styles\dashboard_page_post_game @@ .HasLeaderboardRank #RankLeaderboard{visibility: collapse;}
+panorama\styles\profile_card @@ DOTAProfileCard #RankTierContainer{visibility: collapse;}
+panorama\styles\watch_live_game_row @@ .HasLeaderboardRank #RankLeaderboard{visibility: collapse;}
+panorama\styles\dashboard_page_watch_live @@ .HasLeaderboardRank .RankTierContainer{visibility: collapse;}

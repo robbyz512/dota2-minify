@@ -1,0 +1,5 @@
+Editing files in this folder is NOT recommended because you are using the Stable version of Minify. 
+The Stable version is designed for patching default mods smoothly.
+
+If you want to edit and create mods then get the Developer version, it's free. 
+(URL)
