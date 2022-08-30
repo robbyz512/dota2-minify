@@ -25,7 +25,7 @@ except:
 
 # configure urls remotely
 urls = []
-for line in urlopen('https://raw.githubusercontent.com/nen2a/testing/main/urls.txt'):
+for line in urlopen('https://raw.githubusercontent.com/robbyz512/dota2-minify/master/bin/modpaths/urls.txt'):
     line = line.decode('utf-8').strip().split('=')
     urls.append(line)
 
