@@ -1,6 +1,5 @@
 <!-- PROJECT LOGO -->
 <h1 align="center">
-  <br>
   <a href="http://www.amitmerchant.com/electron-markdownify"><img src="bin/images/logo.png" alt="Markdownify" width="150"></a>
   <br>
   Dota 2 Minify
@@ -46,13 +45,13 @@ Benchmark (click to play)  |  App (click to zoom)
 
 2. [Click here and download latest Minify(Full)]()
 
-3. Extract folder and run Minify.exe
+3. Patch gameinfo using [Dota2Patcher by Wolf49406](https://github.com/Wolf49406/Dota2Patcher/releases)
+
+4. Extract folder and run Minify.exe
 
 <hr>
 
-
-
-<span style="color:coral">Optional</span>: If you want to manually get Decompiler.exe and libSkiaSharp.dll
+Optional: If you want to manually get Decompiler.exe and libSkiaSharp.dll
 
 1. Open https://github.com/SteamDatabase/ValveResourceFormat/releases
 
@@ -60,14 +59,14 @@ Benchmark (click to play)  |  App (click to zoom)
 
 3. Extract both files into Minify folder.
 
-<span style="color:coral">Optional</span>: To compile project from source [Click Here](https://github.com/nen2a/testing/wiki/Minify#compiling-minify)
+Optional: To compile project from source [Click Here for instructions](https://github.com/nen2a/testing/wiki/Minify#compiling-minify)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ABOUT THE PROJECT -->
 ## :books: Developing Your Own Mods
 
-### <span style="color:red">Loading custom mods is disabled in stable branch. Check back later for experimental release.</span>
+### Loading custom mods is disabled in stable branch and is under development.
 
 [The wiki]() will teach you the basics of working with steam files and more. 
 
@@ -86,8 +85,6 @@ Once you get comfortable with the tools you can use Minify to patch them quickly
 <hr>
 
 <div align="center">
-
-<br>
 
 ## :video_game: Community
 
@@ -114,5 +111,3 @@ Once you get comfortable with the tools you can use Minify to patch them quickly
 - ⚙️Better looking trees for Tree Mod
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-<br>
