@@ -199,12 +199,13 @@ class App():
             # clean up previous patching data
             helper.cleanFolders(mpaths.build_dir, mpaths.logs_dir, mpaths.content_dir, mpaths.game_dir, mpaths.minify_dir)
             styling_dictionary = {}
-            blacklist_dictionary = {}
+            # blacklist_dictionary = {}
             helper.warnings = []
 
             blank_file_extensions = helper.getBlankFileExtensions(mpaths.blank_files_dir) # list of extensions in bin/blank-files
             blacklist_data = [] # path from every blacklist.txt
             styling_data = [] # path and style from every styling.txt
+            styling_key_nums = helper.randints() # to create unique keys for dictionaries
 
             for folder in mpaths.mods_folders:
                 try:
@@ -256,7 +257,7 @@ class App():
                                     line = line.strip()
                                     path, extension = os.path.splitext(line)
 
-                                    blacklist_dictionary["blacklist-key{}".format(index+1)] = path, extension
+                                    # blacklist_dictionary["blacklist-key{}".format(index+1)] = path, extension
 
                                     if not os.path.exists(os.path.join(mpaths.game_dir, os.path.dirname(path))): os.makedirs(os.path.join(mpaths.game_dir, os.path.dirname(path)))
 
@@ -266,7 +267,6 @@ class App():
                                         helper.warnings.append(f"[Invalid Extension] '{line}' in 'mods\\{os.path.basename(mod_path)}\\blacklist.txt' does not end in one of the valid extensions -> {blank_file_extensions}")    
 
                                 blacklist_data = []
-                                
                             # --------------------------------- styling.txt --------------------------------- #
                             if os.stat(styling_txt).st_size == 0:   print("    styling.txt: empty file, skipping")
                             else:
@@ -287,7 +287,7 @@ class App():
                                         else:
                                             styling_data.append(line)
 
-                                print(f"    styling.txt: Found {len(styling_data)} paths")
+                                print(f"    styling.txt: Found styling.txt")
 
                                 for index, line in enumerate(styling_data):
                                     try:
@@ -296,6 +296,7 @@ class App():
                                         style = line[1].strip()
 
                                         styling_dictionary["styling-key{}".format(index+1)] = path, style
+                                                                                                
                                     except Exception as exception:
                                         helper.warnings.append("[{}]".format(type(exception).__name__) + " Could not validate '{}' in --> 'mods\\{}\\styling.txt' [line: {}]".format(line, folder, index+1))
 
@@ -308,7 +309,6 @@ class App():
                                         except KeyError:
                                             helper.warnings.append("Path does not exist in VPK -> '{}', error in 'mods\\{}\\styling.txt'".format(construct1.path.vcss_c, folder))
                                             del styling_dictionary[key]
-                                styling_data = []
                                 
                 except Exception as exception:
                     exceptiondata = traceback.format_exc().splitlines()
@@ -325,9 +325,9 @@ class App():
             print("→ Patching")
             for key, value in list(styling_dictionary.items()):
                 construct2 = Path(value[0], value[1])
+                
                 with open(os.path.join(mpaths.build_dir, construct2.path.css), 'r+') as file: 
                     if construct2.style not in file.read():
-                        print(construct2.style.strip())
                         file.write("\n" + construct2.style.strip())
             # ---------------------------------- STEP 4 ---------------------------------- #
             # -----------------  Move uncompiled files in build to content --------------- #
