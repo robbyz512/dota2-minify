@@ -43,7 +43,7 @@ Benchmark (click to play)  |  App (click to zoom)
 
 1. Right-click on Dota 2 in Steam and select **Properties** > **DLC** then install **"Dota 2 Workshop Tools DLC"**
 
-2. [Click here and download latest Minify(Full)](https://github.com/robbyz512/dota2-minify/releases/tag/v1.0.22)
+2. [Click here and download latest Minify(Full)](https://github.com/robbyz512/dota2-minify/releases)
 
 3. Extract zip file and run Minify.exe
 
@@ -70,7 +70,7 @@ Optional: To compile project from source [Click Here for instructions](https://g
 
 ### Loading custom mods is disabled in stable branch and is under development.
 
-[The wiki]() will teach you the basics of working with steam files and more. 
+[The wiki](https://github.com/robbyz512/dota2-minify/wiki) will teach you the basics of working with steam files and more. 
 
 Once you get comfortable with the tools you can use Minify to patch them quickly.
 
@@ -78,11 +78,11 @@ Once you get comfortable with the tools you can use Minify to patch them quickly
 
 | Name | Description 
 | --- | --- |
-| [`Files`]() | Compiled files you want to pack (Models, Meshes, Textures...etc)
-| [`blacklist.txt`]() | *Paths* to files to replace with blanks so they wont appear in game (Particles, Sounds...etc)
-| [`styling.txt`]() | Custom CSS you want to apply to the Panorama (Interfaces, Layouts, HUD's...etc)
+| [`Files`](https://github.com/robbyz512/dota2-minify/wiki/Minify#files) | Compiled files you want to pack (Models, Meshes, Textures...etc)
+| [`blacklist.txt`](https://github.com/robbyz512/dota2-minify/wiki/Minify#blacklisttxt) | *Paths* to files to replace with blanks so they wont appear in game (Particles, Sounds...etc)
+| [`styling.txt`](https://github.com/robbyz512/dota2-minify/wiki/Minify#stylingtxt) | Custom CSS you want to apply to the Panorama (Interfaces, Layouts, HUD's...etc)
 
-[Click here to do the Beginner Mod Tutorial]()
+[Click here to do the Beginner Mod Tutorial](https://github.com/robbyz512/dota2-minify/wiki/Minify#create-your-first-mod-tutorial)
 
 <hr>
 
