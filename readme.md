@@ -45,9 +45,11 @@ Benchmark (click to play)  |  App (click to zoom)
 
 2. [Click here and download latest Minify(Full)](https://github.com/robbyz512/dota2-minify/releases/tag/v1.0.22)
 
-3. Patch gameinfo using [Dota2Patcher by Wolf49406](https://github.com/Wolf49406/Dota2Patcher/releases)
+3. Extract zip file and run Minify.exe
 
-4. Extract folder and run Minify.exe
+4. Patch gameinfo using [Dota2Patcher by Wolf49406](https://github.com/Wolf49406/Dota2Patcher/releases)
+
+5. Play Dota2 and have fun!
 
 <hr>
 
@@ -59,7 +61,7 @@ Optional: If you want to manually get Decompiler.exe and libSkiaSharp.dll
 
 3. Extract both files into Minify folder.
 
-Optional: To compile project from source [Click Here for instructions](https://github.com/nen2a/testing/wiki/Minify#compiling-minify)
+Optional: To compile project from source [Click Here for instructions](https://github.com/robbyz512/dota2-minify/wiki/Minify#compiling-minify)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
