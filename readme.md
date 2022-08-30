@@ -43,7 +43,7 @@ Benchmark (click to play)  |  App (click to zoom)
 
 1. Right-click on Dota 2 in Steam and select **Properties** > **DLC** then install **"Dota 2 Workshop Tools DLC"**
 
-2. [Click here and download latest Minify(Full)]()
+2. [Click here and download latest Minify(Full)](https://github.com/robbyz512/dota2-minify/releases/tag/v1.0.22)
 
 3. Patch gameinfo using [Dota2Patcher by Wolf49406](https://github.com/Wolf49406/Dota2Patcher/releases)
 
