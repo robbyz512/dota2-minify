@@ -205,8 +205,7 @@ class App():
             blank_file_extensions = helper.getBlankFileExtensions(mpaths.blank_files_dir) # list of extensions in bin/blank-files
             blacklist_data = [] # path from every blacklist.txt
             styling_data = [] # path and style from every styling.txt
-            styling_key_nums = helper.randints() # to create unique keys for dictionaries
-
+            
             for folder in mpaths.mods_folders:
                 try:
                     mod_path = os.path.join(mpaths.mods_dir, folder)

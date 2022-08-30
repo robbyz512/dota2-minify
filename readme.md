@@ -34,7 +34,7 @@
 
 Benchmark (click to play)  |  App (click to zoom)
 :-------------------------:|:-------------------------:
-[![](https://i.imgur.com/Lglso6f.pngg)](https://www.youtube.com/watch?v=0TuS7qbgsQQ")  | ![](https://i.imgur.com/f67GqpQ.png)
+[![](https://i.imgur.com/Lglso6f.pngg)](https://www.youtube.com/watch?v=0TuS7qbgsQQ")  | ![](https://i.imgur.com/BLFykM5.jpeg)
 
 <hr>
 
@@ -80,7 +80,6 @@ Once you get comfortable with the tools you can use Minify to patch them quickly
 | [`Files`]() | Compiled files you want to pack (Models, Meshes, Textures...etc)
 | [`blacklist.txt`]() | *Paths* to files to replace with blanks so they wont appear in game (Particles, Sounds...etc)
 | [`styling.txt`]() | Custom CSS you want to apply to the Panorama (Interfaces, Layouts, HUD's...etc)
-| [`note.txt`]() | Optionally add this to display a message to users after patching.
 
 [Click here to do the Beginner Mod Tutorial]()
 
@@ -92,14 +91,14 @@ Once you get comfortable with the tools you can use Minify to patch them quickly
 
 ## :video_game: Community
 
-<img style="margin-right: 10px" src="https://img.shields.io/badge/Discord-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white">
-<img src="https://img.shields.io/badge/Github_Wiki-%23000000.svg?style=for-the-badge">
+<a href="https://discord.gg/2YDnqpbcKM"><img style="margin-right: 10px" src="https://img.shields.io/badge/Discord-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white"></a>
+<a href="#"><img src="https://img.shields.io/badge/Github_Wiki-%23000000.svg?style=for-the-badge"></a>
 
 <br>
 
 ## :gem: Support the Project
-<!-- Your pledge helps keep Minify in active development. -->
-<img style="margin-right: 10px;" src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160"></a>
+    Your pledge helps keep Minify in active development
+<a href="https://www.patreon.com/minify"><img style="margin-right: 10px;" src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160"></a>
 
 </div>
 

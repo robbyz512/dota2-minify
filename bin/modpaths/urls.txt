@@ -1,0 +1,6 @@
+update_url=""
+discord_url=https://discord.gg/2YDnqpbcKM
+patreon_url=https://www.patreon.com/minify
+help_url=""
+latest_version_url=1.0.22
+dev_version=""
