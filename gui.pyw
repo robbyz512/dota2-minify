@@ -335,15 +335,16 @@ class App():
             # ---------------------------------- step 5 ---------------------------------- #
             # -------------- Compile content to game with resource compiler -------------- #
             # ---------------------------------------------------------------------------- #
-            with open(os.path.join(mpaths.logs_dir, 'resourcecompiler.txt'), 'wb') as file:
-                print("→ Compiling")
-                sp_compiler = subprocess.run([mpaths.resource_compiler, '-i', mpaths.content_dir + '/*', '-r'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-                if sp_compiler.stdout != b"":
-                    file.write(sp_compiler.stdout)
-                
-                if sp_compiler.stderr != b"":
-                    decoded_err = sp_compiler.stderr.decode("utf-8")
-                    raise Exception(decoded_err)
+            if helper.workshop_installed == True:
+                with open(os.path.join(mpaths.logs_dir, 'resourcecompiler.txt'), 'wb') as file:
+                    print("→ Compiling")
+                    sp_compiler = subprocess.run([mpaths.resource_compiler, '-i', mpaths.content_dir + '/*', '-r'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                    if sp_compiler.stdout != b"":
+                        file.write(sp_compiler.stdout)
+                    
+                    if sp_compiler.stderr != b"":
+                        decoded_err = sp_compiler.stderr.decode("utf-8")
+                        raise Exception(decoded_err)
             # ---------------------------------- STEP 6 ---------------------------------- #
             # -------- Create VPK from game folder and save into Minify directory -------- #
             # ---------------------------------------------------------------------------- #

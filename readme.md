@@ -49,7 +49,7 @@ Benchmark (click to play)  |  App (click to zoom)
 
 4. Patch gameinfo using [Dota2Patcher by Wolf49406](https://github.com/Wolf49406/Dota2Patcher/releases)
 
-5. Play Dota2 and have fun!
+5. Go play dota2!
 
 <hr>
 
