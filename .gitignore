@@ -1,9 +1,10 @@
 # Minify
 Decompiler.exe
 libSkiaSharp.dll
-builds/*
 Decompiler.exe
 libSkiaSharp.dll
+*.css
+*.vcss_c
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

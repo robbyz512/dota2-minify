@@ -6,7 +6,7 @@
 # ---------------------------------------------------------- 
 
 # This is the stable branch
-# If you are interested in developing use the experimental branch (Url)
+# If you are interested in contributing to the project use the developer branch
 
 import os
 import sys
