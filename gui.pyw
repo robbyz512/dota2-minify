@@ -24,7 +24,7 @@ import mpaths
 import validatefiles
 import helper
 
-version = "1.0"
+version = "1.01.22"
 
 # button size
 btnXpad = 5
@@ -170,7 +170,7 @@ class App():
         if helper.workshop_installed == False:
             helper.disableWorkshopMods(mpaths.mods_dir, mpaths.mods_folders, checkboxes)
 
-        if version == version:
+        if version == mpaths.latest_version_url:
             self.updateBtn.config(state='disabled')
             self.versionLabel.config(fg="#0cb6b3")
             self.versionLabel.config(text=f"Latest version {version}")
