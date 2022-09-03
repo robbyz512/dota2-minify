@@ -24,7 +24,7 @@ import mpaths
 import validatefiles
 import helper
 
-version = "1.01.22"
+version = "1.02.22"
 
 # button size
 btnXpad = 5
@@ -118,14 +118,16 @@ class App():
         self.updateBtn = tk.Button(self.buttonsFrame, text='Update', state=tk.NORMAL, width=btnW, takefocus=False, command=lambda:threading.Thread(target=helper.urlDispatcher(mpaths.update_url), daemon=True).start())
         self.updateBtn.grid(row=11, column=0, pady=btnYpad, padx=btnXpad)
         self.updateBtnTip = Hovertip(self.updateBtn, text='')
-        self.exitBtn = tk.Button(self.buttonsFrame, text='Exit', width=btnW, takefocus=False, command=self.exit)
-        self.exitBtn.grid(row=11, column=1, pady=btnYpad, padx=btnXpad)
+        self.uninstallBtn = tk.Button(self.buttonsFrame, text='Uninstall', width=btnW, takefocus=False, command=lambda:threading.Thread(target=self.uninstaller, daemon=True).start())
+        self.uninstallBtn.grid(row=11, column=1, pady=btnYpad, padx=btnXpad)
         self.versionLabel = tk.Label(self.buttonsFrame, font=("None", 8), width=20)
         self.versionLabel.grid(row=12, column=0)
         self.patreonBtn = tk.Button(self.buttonsFrame, text='Patreon', width=btnW, takefocus=False, command=lambda:threading.Thread(target=helper.urlDispatcher(mpaths.patreon_url), daemon=True).start())
         self.patreonBtn.grid(row=14, column=0, pady=btnYpad, padx=btnXpad)
         self.discordBtn = tk.Button(self.buttonsFrame, text='Discord', width=btnW, takefocus=False, command=lambda:threading.Thread(target=helper.urlDispatcher(mpaths.discord_url), daemon=True).start())
         self.discordBtn.grid(row=14, column=1, pady=btnYpad, padx=btnXpad)
+        self.exitBtn = tk.Button(self.buttonsFrame, text='Exit', width=btnW, takefocus=False, command=self.exit)
+        self.exitBtn.grid(row=15, column=0, pady=btnYpad, padx=btnXpad)
 
         # Other Widget
         self.consoleText = tk.Text(self.consoleFrame, wrap=tk.WORD, state=tk.DISABLED, width=78, borderwidth=2, bg="#FFFFF7", relief="groove")
@@ -182,6 +184,14 @@ class App():
             self.versionLabel.config(text="New version available!")
             self.updateBtnTip.text = ''
             self.updateBtnTip.hover_delay = 500000 # .text='' showing pixelated whitespace, just set hover delay to forever
+
+    def uninstaller(self):
+        fullPath = os.path.join(mpaths.dota_minify, 'pak01_dir.vpk')
+        if os.path.exists(fullPath):
+            os.remove(fullPath)
+            print("All Minify mods have been removed from '{}'".format(fullPath))
+        else:
+            print("No Minify mods are installed.")
     # ---------------------------------------------------------------------------- #
     #                                     Main                                     #
     # ---------------------------------------------------------------------------- #

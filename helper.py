@@ -76,7 +76,7 @@ def toggleFrameOff(frame_checkbox, frame_buttons):
             widget.configure(state='disable')
 
 def getAppHeight(mods_folders):
-    height = 420
+    height = 465
 
     num_of_mods = len(mods_folders)
     i = 10
