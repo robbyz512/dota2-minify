@@ -5,6 +5,7 @@ Decompiler.exe
 libSkiaSharp.dll
 *.css
 *.vcss_c
+local
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

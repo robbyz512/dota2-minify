@@ -10,6 +10,7 @@
 
 import os
 import sys
+from wsgiref import validate
 import vpk
 import shutil
 import psutil
@@ -24,7 +25,7 @@ import mpaths
 import validatefiles
 import helper
 
-version = "1.02.22"
+version = "1.03.22"
 
 # button size
 btnXpad = 5
@@ -186,21 +187,29 @@ class App():
             self.updateBtnTip.hover_delay = 500000 # .text='' showing pixelated whitespace, just set hover delay to forever
 
     def uninstaller(self):
+        with open(mpaths.gameinfo_dir, "r") as file:
+            contents = file.readlines()
+        with open(mpaths.gameinfo_dir, 'w') as file:
+            for line in contents:
+                if 'minify' not in line:
+                    file.write(line)
+
         fullPath = os.path.join(mpaths.dota_minify, 'pak01_dir.vpk')
-        if os.path.exists(fullPath):
-            os.remove(fullPath)
-            print("All Minify mods have been removed from '{}'".format(fullPath))
-        else:
-            print("No Minify mods are installed.")
+        if os.path.exists(fullPath): os.remove(fullPath)
+        print("All Minify mods have been removed.")
     # ---------------------------------------------------------------------------- #
     #                                     Main                                     #
     # ---------------------------------------------------------------------------- #
-    def patcher(self): 
+    def patcher(self):
         global patching
         
         if "dota2.exe" in (p.name() for p in psutil.process_iter()):
             print("Please close Dota 2 first and then patch.")
             return
+
+        with open(mpaths.gameinfo_dir, 'r') as file:
+            if helper.l1 and helper.l2 not in file.read():
+                helper.patchGameInfo(mpaths.gameinfo_dir)
 
         patching = True 
         helper.toggleFrameOff(self.checkboxesFrame, self.buttonsFrame)

@@ -63,16 +63,20 @@ def toggleFrameOn(frame_checkbox, frame_buttons, mods_dir, mods_folders, checkbo
     for widget in frame_buttons.winfo_children():
         if widget.cget('text') == 'Patch':
             widget.configure(state='normal')
+        if widget.cget('text') == 'Uninstall':
+            widget.configure(state='normal')
 
     if workshop_installed == False:
         disableWorkshopMods(mods_dir, mods_folders, checkboxes)
-    
 
 def toggleFrameOff(frame_checkbox, frame_buttons):
     for widget in frame_checkbox.winfo_children():
         widget.configure(state='disable')
+
     for widget in frame_buttons.winfo_children():
         if widget.cget('text') == 'Patch':
+            widget.configure(state='disable')
+        if widget.cget('text') == 'Uninstall':
             widget.configure(state='disable')
 
 def getAppHeight(mods_folders):

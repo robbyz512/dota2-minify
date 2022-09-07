@@ -53,16 +53,17 @@ gameinfo_dir = os.path.join(steam_dir, "steamapps\\common\\dota 2 beta\\game\\do
 pak01_dir = os.path.join(steam_dir, "steamapps\\common\\dota 2 beta\\game\\dota\\pak01_dir.vpk")
 
 # exclude invalid mods
-enabled_mods = ['Auto Accept Match', 
-                'Dark Terrain', 
-                'Hide Ranks', 
-                'Minify HUD', 
-                'Minify Spells & Items', 
-                'Misc Optimization', 
+enabled_mods = ['Auto Accept Match',
+                'Dark Terrain',
+                # 'Hide Ranks',
+                'Minify HUD',
+                'Minify Spells & Items',
+                'Misc Optimization',
                 'Remove Battlepass Sounds', 
+                'Remove Menu Background',
                 'Remove Foilage', 
                 'Remove Pinging', 
-                'Remove Sprays', 
+                # 'Remove Sprays', 
                 'Tree Mod']
 
 mods_folders = []
