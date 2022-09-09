@@ -236,12 +236,12 @@ class App():
                         if box.var.get() == 1 and checkboxes[box] == folder: # step into folders that have ticked checkboxes only
                             print("→ Installing " + folder)
                             # ----------------------------------- files ---------------------------------- #
-                            if files_total == 0:    print(f"    files: empty folder, skipping")
-                            elif files_total == 1:  print(f"    files: Found {files_total} file")
-                            else:                   print(f"    files: Found {files_total} files")
+                            # if files_total == 0:    pass
+                            # elif files_total == 1:  print(f"    files: Found {files_total} file")
+                            # else:                   print(f"    files: Found {files_total} files")
                             shutil.copytree(os.path.join(mod_path, 'files'), mpaths.game_dir, dirs_exist_ok=True)
                             # ------------------------------- blacklist.txt ------------------------------ #
-                            if os.stat(blacklist_txt).st_size == 0:   print("    blacklist.txt: empty file, skipping")
+                            if os.stat(blacklist_txt).st_size == 0: pass
                             else:
                                 with open(blacklist_txt) as file:
 
@@ -269,7 +269,7 @@ class App():
                                             else:
                                                 helper.warnings.append(f"[Invalid Extension] '{line}' in 'mods\\{folder}\\blacklist.txt' [line: {index+1}] does not end in one of the valid extensions -> {blank_file_extensions}")
                                 
-                                print(f"    blacklist.txt: Found {len(blacklist_data)} paths")
+                                # print(f"    blacklist.txt: Found {len(blacklist_data)} paths")
 
                                 for index, line in enumerate(blacklist_data):
                                     line = line.strip()
@@ -286,7 +286,7 @@ class App():
 
                                 blacklist_data = []
                             # --------------------------------- styling.txt --------------------------------- #
-                            if os.stat(styling_txt).st_size == 0:   print("    styling.txt: empty file, skipping")
+                            if os.stat(styling_txt).st_size == 0: pass
                             else:
                                 with open(styling_txt) as file:
 
@@ -305,7 +305,7 @@ class App():
                                         else:
                                             styling_data.append(line)
 
-                                print(f"    styling.txt: Found styling.txt")
+                                # print(f"    styling.txt: Found styling.txt")
 
                                 for index, line in enumerate(styling_data):
                                     try:
