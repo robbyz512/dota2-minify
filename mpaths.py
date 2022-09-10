@@ -55,15 +55,15 @@ pak01_dir = os.path.join(steam_dir, "steamapps\\common\\dota 2 beta\\game\\dota\
 # exclude invalid mods
 enabled_mods = ['Auto Accept Match',
                 'Dark Terrain',
+                'Default Menu Background',
                 # 'Hide Ranks',
                 'Minify HUD',
                 'Minify Spells & Items',
                 'Misc Optimization',
                 'Remove Battlepass Sounds', 
-                'Remove Menu Background',
                 'Remove Foilage', 
                 'Remove Pinging', 
-                # 'Remove Sprays', 
+                'Remove Sprays', 
                 'Tree Mod']
 
 mods_folders = []

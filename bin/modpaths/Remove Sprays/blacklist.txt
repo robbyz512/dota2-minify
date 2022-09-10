@@ -1,6 +1,2 @@
->>materials\particle\sprays\teamfancontent
-particles\sprays\spray_placement.vpcf_c
-particles\sprays\spray_placement_ember.vpcf_c
-particles\sprays\spray_placement_light.vpcf_c
-particles\sprays\ti9_procedural_spray.vpcf_c.vpcf_c
+>>particles\sprays
 sounds\misc\spraypaint.vsnd_c
