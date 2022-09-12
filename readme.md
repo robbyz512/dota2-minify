@@ -7,7 +7,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/License-MIT-teal.svg">
+  <img src="https://img.shields.io/badge/License-GPLv3-blue.svg">
 </p>
 
 <h4 align="center" style="font-weight: bold;">Automation and Modding Tool for Dota 2</h4>
