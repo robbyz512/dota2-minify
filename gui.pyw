@@ -117,7 +117,7 @@ class App():
                 self.modLabel.bind("<Leave>", partial(helper.modLabelColorConfig, self.modLabel, "#0000EE"))
                 self.modLabel.bind("<Button-1>", partial(helper.modInfo, self.modLabel, self.name, mod_path))
                 self.modLabel.grid(row=index, column=1, sticky='w')
-                
+
         # Buttons
         self.patchBtn = tk.Button(self.buttonsFrame, text='Patch', state=tk.NORMAL, width=btnW, takefocus=False, command=lambda:threading.Thread(target=self.patcher, daemon=True).start())
         self.patchBtn.grid(row=10, column=0, pady=btnYpad, padx=btnXpad)
