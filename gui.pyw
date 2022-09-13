@@ -5,12 +5,8 @@
 #   \/_/  \/_/   \/_/   \/_/ \/_/   \/_/   \/_/     \/_____/ 
 # ---------------------------------------------------------- 
 
-# This is the stable branch
-# If you are interested in contributing to the project use the developer branch
-
 import os
 import sys
-from wsgiref import validate
 import vpk
 import shutil
 import psutil
@@ -18,6 +14,7 @@ import traceback
 import threading
 import subprocess
 import tkinter as tk
+from functools import partial
 from idlelib.tooltip import Hovertip
 from shutil import copytree, ignore_patterns
 
@@ -25,11 +22,11 @@ import mpaths
 import validatefiles
 import helper
 
-version = "1.03.22"
+version = "1.04.22"
 
 # button size
 btnXpad = 5
-btnYpad = 10
+btnYpad = 8
 btnW = 8
 
 patching = False
@@ -84,7 +81,7 @@ class App():
         self.root.title("Minify Dota2")
         self.root.iconbitmap('bin/images/favicon.ico')
         self.root.resizable(False, False)
-        self.app_width = 840
+        self.app_width = 800
         self.app_height = helper.getAppHeight(mpaths.mods_folders)
         self.screen_width = self.root.winfo_screenwidth()
         self.screen_height = self.root.winfo_screenheight()
@@ -110,7 +107,17 @@ class App():
             self.current_box.var = self.current_var
             self.current_box.grid(row=index, column=0, sticky='w')
             checkboxes[self.current_box] = self.name  # so checkbutton object is the key and value is string
-
+            
+            mod_path = os.path.join(mpaths.mods_dir, self.name)
+            notes_txt = os.path.join(mod_path, 'notes.txt')
+            if os.path.exists(notes_txt) and os.stat(notes_txt).st_size != 0:
+                self.modLabel = tk.Label(self.checkboxesFrame, font=("Poplar Std", 7), fg="#0000EE", cursor="hand2")
+                self.modLabel.config(text="details")
+                self.modLabel.bind("<Enter>", partial(helper.modLabelColorConfig, self.modLabel, "#000010"))
+                self.modLabel.bind("<Leave>", partial(helper.modLabelColorConfig, self.modLabel, "#0000EE"))
+                self.modLabel.bind("<Button-1>", partial(helper.modInfo, self.modLabel, self.name, mod_path))
+                self.modLabel.grid(row=index, column=1, sticky='w')
+                
         # Buttons
         self.patchBtn = tk.Button(self.buttonsFrame, text='Patch', state=tk.NORMAL, width=btnW, takefocus=False, command=lambda:threading.Thread(target=self.patcher, daemon=True).start())
         self.patchBtn.grid(row=10, column=0, pady=btnYpad, padx=btnXpad)
@@ -131,14 +138,14 @@ class App():
         self.exitBtn.grid(row=15, column=0, pady=btnYpad, padx=btnXpad)
 
         # Other Widget
-        self.consoleText = tk.Text(self.consoleFrame, wrap=tk.WORD, state=tk.DISABLED, width=78, borderwidth=2, bg="#FFFFF7", relief="groove")
+        self.consoleText = tk.Text(self.consoleFrame, wrap=tk.WORD, state=tk.DISABLED, width=72, borderwidth=2, bg="#FFFFF7", relief="groove")
         self.consoleText.grid(row=0,column=0)
         self.consoleText.configure(font=("Fixedsys"))
         self.devLabel = tk.Label(self.consoleFrame, font=("Tahoma", 8), width=40)
-        self.devLabel.config(text=f"Want to create Dota2 mods with Minify?")
-        self.devLabel.place(x=400,y=390)
+        self.devLabel.config(text="Want to create Dota2 mods with Minify?")
+        self.devLabel.place(x=340,y=390)
         self.devbtn = tk.Button(self.consoleFrame, text='Download Developer Version', width=22, height=1, font=("None", 7), takefocus=False, command=lambda:threading.Thread(target=helper.urlDispatcher(mpaths.dev_version), daemon=True).start())
-        self.devbtn.place(x=475,y=412)
+        self.devbtn.place(x=420,y=412)
 
         # redirects stdout and stderror to text box widget, which means print statements will not appear in the gui until these two lines are ran
         sys.stdout = TextRedirector(self.consoleText, "stdout")
@@ -228,7 +235,7 @@ class App():
             for folder in mpaths.mods_folders:
                 try:
                     mod_path = os.path.join(mpaths.mods_dir, folder)
-                    files_total = sum([len(files) for r, d, files in os.walk(os.path.join(mod_path, 'files'))])
+                    # files_total = sum([len(files) for r, d, files in os.walk(os.path.join(mod_path, 'files'))])
                     blacklist_txt = os.path.join(mod_path, 'blacklist.txt')
                     styling_txt = os.path.join(mod_path, 'styling.txt') 
 
@@ -374,6 +381,8 @@ class App():
             helper.toggleFrameOn(self.checkboxesFrame, self.buttonsFrame, mpaths.mods_dir, mpaths.mods_folders, checkboxes)
             print("→ Done!")
             print("-------------------------------------------------")
+            print("→ Remember to use dota2patcher and patch gameinfo")
+            print("→ if you wish to use mods in online matchmaking.")
             helper.handleWarnings(mpaths.logs_dir)
 
         except Exception:

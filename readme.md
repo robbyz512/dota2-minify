@@ -81,6 +81,7 @@ Once you get comfortable with the tools you can use Minify to patch them quickly
 | [`Files`](https://github.com/robbyz512/dota2-minify/wiki/Minify#files) | Compiled files you want to pack (Models, Meshes, Textures...etc)
 | [`blacklist.txt`](https://github.com/robbyz512/dota2-minify/wiki/Minify#blacklisttxt) | *Paths* to files to replace with blanks so they wont appear in game (Particles, Sounds...etc)
 | [`styling.txt`](https://github.com/robbyz512/dota2-minify/wiki/Minify#stylingtxt) | Custom CSS you want to apply to the Panorama (Interfaces, Layouts, HUD's...etc)
+| `notes.txt` | Optionally include this file to have a details button beside your mod for users to read.
 
 [Click here to do the Beginner Mod Tutorial](https://github.com/robbyz512/dota2-minify/wiki/Minify#create-your-first-mod-tutorial)
 

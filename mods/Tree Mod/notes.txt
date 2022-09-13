@@ -1,0 +1,6 @@
+Turns all trees to small green square bushes
+
+- ONLY works on default terrain you cannot use a custom terrain like desert, immortal gardens..etc 
+- shows juke paths and improves GPU performance since these trees don't use as much geometry as default ones.
+
+I plan to add tree mod to all maps in the future.

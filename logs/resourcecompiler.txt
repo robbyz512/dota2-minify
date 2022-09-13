@@ -1,0 +1,6 @@
+NvAPI initialized: NVidia Complete Version 1.10
+NVIDIA Driver Version: 516.59 r515_00
+-----------------------------------------------------------------
+ WARNING: 0 compiled, 0 failed, 0 skipped, 0m:00s
+-----------------------------------------------------------------
+ID3D11Device has 2 outstanding references indicating leaked D3D11 resources.

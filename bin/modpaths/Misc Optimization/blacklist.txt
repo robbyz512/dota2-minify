@@ -383,3 +383,5 @@ particles\econ\events\diretide_2020\emblem\fall20_emblem_v3_effect.vpcf_c
 particles\econ\events\summer_2021\summer_2021_emblem_effect.vpcf.vpcf_c
 particles\econ\events\ti10\emblem\ti10_emblem_effect.vpcf_c
 particles\econ\events\ti9\ti9_emblem_effect.vpcf_c
+#remove-effigy-effects
+>>particles\econ\items\effigies\status_fx_effigies

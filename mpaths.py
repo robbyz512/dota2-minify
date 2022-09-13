@@ -64,6 +64,7 @@ enabled_mods = ['Auto Accept Match',
                 'Remove Foilage', 
                 'Remove Pinging', 
                 'Remove Sprays', 
+                # 'Testing',
                 'Tree Mod']
 
 mods_folders = []

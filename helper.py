@@ -2,6 +2,7 @@ import os
 import vpk
 import shutil
 import webbrowser
+import tkinter
 import urllib.error
 from urllib.request import urlopen
 
@@ -46,6 +47,26 @@ def patchGameInfo(gameinfo_dir):
 # ---------------------------------------------------------------------------- #
 #                                   GUI                                        #
 # ---------------------------------------------------------------------------- #
+# when you add new arguments to bind in tkinter event must be the last parameter.
+def modLabelColorConfig(widget, color, event):
+    widget.configure(foreground=color)
+
+def modInfo(widget, name, mod_path, event):
+
+    with open(os.path.join(mod_path, 'notes.txt'), 'r') as file:
+        data = file.readlines()
+
+        # convert list to string because text= in tkinter expects a string
+        data = ''.join(data)
+
+    infoWindow = tkinter.Toplevel()
+    infoWindow.title(name)
+    infoWindow.iconbitmap('bin/images/info.ico')
+    infoWindow.resizable(False, False)
+
+    newtxt = tkinter.Label(infoWindow, text=data)
+    newtxt.grid(row=0, column=0, padx=5, pady=5, sticky='nsew')
+
 def disableWorkshopMods(mods_dir, mods_folders, checkboxes):
     for folder in mods_folders:
         mod_path = os.path.join(mods_dir, folder)
@@ -80,7 +101,7 @@ def toggleFrameOff(frame_checkbox, frame_buttons):
             widget.configure(state='disable')
 
 def getAppHeight(mods_folders):
-    height = 465
+    height = 445
 
     num_of_mods = len(mods_folders)
     i = 10
