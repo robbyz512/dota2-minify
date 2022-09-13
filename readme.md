@@ -111,6 +111,6 @@ Once you get comfortable with the tools you can use Minify to patch them quickly
 - ⚙️Remove taunts/tipping/hero voice lines/anything else annoying.
 - ⚙️Upload your own main menu background
 - ⚙️Swap hero/item sounds with your own audio files.
-- ⚙️Better looking trees for Tree Mod
+- ⚙️Tree mod and Dark Terrain for immortal gardens map.
 
 <p align="right">(<a href="#top">back to top</a>)</p>

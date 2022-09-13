@@ -1,4 +1,4 @@
 Makes the entire floor dark tiles.
 
 - ONLY works on default terrain you cannot use a custom terrain like desert, immortal gardens..etc
-- You can turn on "Normal Maps" in graphcis settings to make the tiles look like a grid.
+- You can turn on "Normal Maps" in graphics settings to make the tiles look like a grid.
