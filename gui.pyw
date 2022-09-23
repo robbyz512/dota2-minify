@@ -14,6 +14,7 @@ import traceback
 import threading
 import subprocess
 import tkinter as tk
+from tkinter.messagebox import askyesno
 from functools import partial
 from idlelib.tooltip import Hovertip
 from shutil import copytree, ignore_patterns
@@ -22,12 +23,13 @@ import mpaths
 import validatefiles
 import helper
 
-version = "1.04.22"
+version = "1.05.22"
 
-# button size
-btnXpad = 5
+# widget vars
+btnXpad = 8
 btnYpad = 8
 btnW = 8
+hoverDelay = 250
 
 patching = False
 checkboxes = {}
@@ -91,7 +93,7 @@ class App():
         # -------------------------------- widgets -------------------------------- #
 
         self.checkboxesFrame = tk.Frame(self.root)
-        self.checkboxesFrame.grid(row=0, column=0, sticky='w')
+        self.checkboxesFrame.grid(row=0, column=0, padx=btnXpad, sticky='w')
 
         self.buttonsFrame = tk.Frame(self.root)
         self.buttonsFrame.grid(row=1, column=0, pady=13, sticky='nsew')
@@ -108,6 +110,7 @@ class App():
             self.current_box.grid(row=index, column=0, sticky='w')
             checkboxes[self.current_box] = self.name  # so checkbutton object is the key and value is string
             
+            # details label
             mod_path = os.path.join(mpaths.mods_dir, self.name)
             notes_txt = os.path.join(mod_path, 'notes.txt')
             if os.path.exists(notes_txt) and os.stat(notes_txt).st_size != 0:
@@ -118,34 +121,52 @@ class App():
                 self.modLabel.bind("<Button-1>", partial(helper.modInfo, self.modLabel, self.name, mod_path))
                 self.modLabel.grid(row=index, column=1, sticky='w')
 
+            # patreon mods
+            color = '#E5BA78'
+            patreon_txt = os.path.join(mod_path, 'files\patreon.txt')
+            self.patreonTip = Hovertip(self.current_box, text='')
+            if self.name in mpaths.patreon_mods:
+                self.current_box.config(fg=color, activeforeground=color)
+                if not os.path.exists(patreon_txt):
+                    helper.patreon_enabled = False
+                    self.current_box.config(state='disable', disabledforeground=color)
+                    self.patreonTip.text = 'If you are a Patreon member go download your ZIP file on #downloads in discord to enable this.'
+                    self.patreonTip.hover_delay = hoverDelay
+                else:
+                    self.patreonTip.hover_delay = 500000
+            else:
+                self.patreonTip.hover_delay = 500000
+
         # Buttons
         self.patchBtn = tk.Button(self.buttonsFrame, text='Patch', state=tk.NORMAL, width=btnW, takefocus=False, command=lambda:threading.Thread(target=self.patcher, daemon=True).start())
-        self.patchBtn.grid(row=10, column=0, pady=btnYpad, padx=btnXpad)
+        self.patchBtn.grid(row=10, column=0, pady=btnYpad, padx=btnXpad, sticky='w')
         self.helpBtn = tk.Button(self.buttonsFrame, text='Help', state=tk.NORMAL, width=btnW, takefocus=False, command=lambda:threading.Thread(target=helper.urlDispatcher(mpaths.help_url), daemon=True).start())
-        self.helpBtn.grid(row=10, column=1, pady=btnYpad, padx=btnXpad)
+        self.helpBtn.grid(row=10, column=1, pady=btnYpad, padx=btnXpad, sticky='w')
         self.updateBtn = tk.Button(self.buttonsFrame, text='Update', state=tk.NORMAL, width=btnW, takefocus=False, command=lambda:threading.Thread(target=helper.urlDispatcher(mpaths.update_url), daemon=True).start())
-        self.updateBtn.grid(row=11, column=0, pady=btnYpad, padx=btnXpad)
+        self.updateBtn.grid(row=11, column=0, pady=btnYpad, padx=btnXpad, sticky='w')
         self.updateBtnTip = Hovertip(self.updateBtn, text='')
         self.uninstallBtn = tk.Button(self.buttonsFrame, text='Uninstall', width=btnW, takefocus=False, command=lambda:threading.Thread(target=self.uninstaller, daemon=True).start())
-        self.uninstallBtn.grid(row=11, column=1, pady=btnYpad, padx=btnXpad)
+        self.uninstallBtn.grid(row=11, column=1, pady=btnYpad, padx=btnXpad, sticky='w')
         self.versionLabel = tk.Label(self.buttonsFrame, font=("None", 8), width=20)
-        self.versionLabel.grid(row=12, column=0)
+        self.versionLabel.grid(row=12, column=0, sticky='w')
+        self.newVersionLabel = tk.Label(self.buttonsFrame, font=("None", 8), width=20)
+        self.newVersionLabel.grid(row=13, column=0, sticky='w')
         self.patreonBtn = tk.Button(self.buttonsFrame, text='Patreon', width=btnW, takefocus=False, command=lambda:threading.Thread(target=helper.urlDispatcher(mpaths.patreon_url), daemon=True).start())
-        self.patreonBtn.grid(row=14, column=0, pady=btnYpad, padx=btnXpad)
+        self.patreonBtn.grid(row=14, column=0, pady=btnYpad, padx=btnXpad, sticky='w')
         self.discordBtn = tk.Button(self.buttonsFrame, text='Discord', width=btnW, takefocus=False, command=lambda:threading.Thread(target=helper.urlDispatcher(mpaths.discord_url), daemon=True).start())
-        self.discordBtn.grid(row=14, column=1, pady=btnYpad, padx=btnXpad)
+        self.discordBtn.grid(row=14, column=1, pady=btnYpad, padx=btnXpad, sticky='w')
         self.exitBtn = tk.Button(self.buttonsFrame, text='Exit', width=btnW, takefocus=False, command=self.exit)
-        self.exitBtn.grid(row=15, column=0, pady=btnYpad, padx=btnXpad)
+        self.exitBtn.grid(row=15, column=0, pady=btnYpad, padx=btnXpad, sticky='w')
 
         # Other Widget
-        self.consoleText = tk.Text(self.consoleFrame, wrap=tk.WORD, state=tk.DISABLED, width=72, borderwidth=2, bg="#FFFFF7", relief="groove")
+        self.consoleText = tk.Text(self.consoleFrame, wrap=tk.WORD, state=tk.DISABLED, width=65, borderwidth=2, bg="#FFFFF7", relief="groove")
         self.consoleText.grid(row=0,column=0)
         self.consoleText.configure(font=("Fixedsys"))
-        self.devLabel = tk.Label(self.consoleFrame, font=("Tahoma", 8), width=40)
+        self.devLabel = tk.Label(self.consoleFrame, font=("Tahoma", 8))
         self.devLabel.config(text="Want to create Dota2 mods with Minify?")
-        self.devLabel.place(x=340,y=390)
+        self.devLabel.grid(row=1, column=0, sticky='e')
         self.devbtn = tk.Button(self.consoleFrame, text='Download Developer Version', width=22, height=1, font=("None", 7), takefocus=False, command=lambda:threading.Thread(target=helper.urlDispatcher(mpaths.dev_version), daemon=True).start())
-        self.devbtn.place(x=420,y=412)
+        self.devbtn.grid(row=2, column=0, sticky='e')
 
         # redirects stdout and stderror to text box widget, which means print statements will not appear in the gui until these two lines are ran
         sys.stdout = TextRedirector(self.consoleText, "stdout")
@@ -154,7 +175,7 @@ class App():
         welcomeMsg()
 
     def setupSystem(self):
-        x = validatefiles.MyClass(checkboxes)
+        x = validatefiles.MyClass(checkboxes, self.root)
         public_methods = [method for method in dir(x) if callable(getattr(x, method)) if not method.startswith('_')]  # private methods start with _
         try:
             for method in public_methods:
@@ -185,25 +206,36 @@ class App():
             self.versionLabel.config(fg="#0cb6b3")
             self.versionLabel.config(text=f"Latest version {version}")
             self.updateBtnTip.text = 'You are using the latest version'
-            self.updateBtnTip.hover_delay = 250
+            self.updateBtnTip.hover_delay = hoverDelay
         else:
-            self.updateBtn.config(state='normal')
-            self.versionLabel.config(fg="#DE3163")
-            self.versionLabel.config(text="New version available!")
+            self.updateBtn.config(state='normal', fg='#0cb6b3', activeforeground='#0cb6b3')
             self.updateBtnTip.text = ''
             self.updateBtnTip.hover_delay = 500000 # .text='' showing pixelated whitespace, just set hover delay to forever
+        
+            self.newVersionLabel.config(fg='red')
+            self.newVersionLabel.config(text=f"New version! {mpaths.latest_version_url}")
+
+            self.versionLabel.config(fg="#0cb6b3")
+            self.versionLabel.config(text=f"Your version {version}")
 
     def uninstaller(self):
-        with open(mpaths.gameinfo_dir, "r") as file:
-            contents = file.readlines()
-        with open(mpaths.gameinfo_dir, 'w') as file:
-            for line in contents:
-                if 'minify' not in line:
-                    file.write(line)
 
-        fullPath = os.path.join(mpaths.dota_minify, 'pak01_dir.vpk')
-        if os.path.exists(fullPath): os.remove(fullPath)
-        print("All Minify mods have been removed.")
+        root = tk.Tk()
+        root.title('Tkinter Yes/No Dialog')
+        root.geometry('300x150')
+        answer = askyesno(title='confirmation',
+                        message='Remove all mods?')
+        if answer:
+            with open(mpaths.gameinfo_dir, "r") as file:
+                contents = file.readlines()
+            with open(mpaths.gameinfo_dir, 'w') as file:
+                for line in contents:
+                    if 'minify' not in line:
+                        file.write(line)
+
+            fullPath = os.path.join(mpaths.dota_minify, 'pak01_dir.vpk')
+            if os.path.exists(fullPath): os.remove(fullPath)
+            print("All Minify mods have been removed.")
     # ---------------------------------------------------------------------------- #
     #                                     Main                                     #
     # ---------------------------------------------------------------------------- #
@@ -224,6 +256,10 @@ class App():
         try: 
             # clean up previous patching data
             helper.cleanFolders(mpaths.build_dir, mpaths.logs_dir, mpaths.content_dir, mpaths.game_dir, mpaths.minify_dir)
+
+            # patch playXML warning
+            helper.patchPlayXML(mpaths.build_dir)
+
             styling_dictionary = {}
             # blacklist_dictionary = {}
             helper.warnings = []
@@ -231,7 +267,7 @@ class App():
             blank_file_extensions = helper.getBlankFileExtensions(mpaths.blank_files_dir) # list of extensions in bin/blank-files
             blacklist_data = [] # path from every blacklist.txt
             styling_data = [] # path and style from every styling.txt
-            
+
             for folder in mpaths.mods_folders:
                 try:
                     mod_path = os.path.join(mpaths.mods_dir, folder)
@@ -242,6 +278,21 @@ class App():
                     for box in checkboxes:
                         if box.var.get() == 1 and checkboxes[box] == folder: # step into folders that have ticked checkboxes only
                             print("→ Installing " + folder)
+
+                            # temporary workaround to install patreon mods, will be refactored later.
+                            if helper.isSanctumChecked(checkboxes):
+                                if checkboxes[box] == 'Dark Terrain':
+                                    shutil.copytree(os.path.join(mpaths.mods_dir, 'Terrain - Sanctum of the Divine\\Dark Terrain'), mpaths.game_dir, dirs_exist_ok=True)
+                                    continue
+                                if checkboxes[box] == 'Misc Optimization':
+                                    shutil.copytree(os.path.join(mpaths.mods_dir, 'Terrain - Sanctum of the Divine\\Misc Optimization'), mpaths.game_dir, dirs_exist_ok=True)
+                                    continue
+                                if checkboxes[box] == 'Remove Foilage':
+                                    shutil.copytree(os.path.join(mpaths.mods_dir, 'Terrain - Sanctum of the Divine\\Remove Foilage'), mpaths.game_dir, dirs_exist_ok=True)
+                                    continue
+                                if checkboxes[box] == 'Tree Mod':
+                                    shutil.copytree(os.path.join(mpaths.mods_dir, 'Terrain - Sanctum of the Divine\\Tree Mod'), mpaths.game_dir, dirs_exist_ok=True)
+                                    continue
                             # ----------------------------------- files ---------------------------------- #
                             # if files_total == 0:    pass
                             # elif files_total == 1:  print(f"    files: Found {files_total} file")
@@ -378,7 +429,7 @@ class App():
             newpak.save(os.path.join(mpaths.dota_minify, 'pak01_dir.vpk'))
 
             patching = False
-            helper.toggleFrameOn(self.checkboxesFrame, self.buttonsFrame, mpaths.mods_dir, mpaths.mods_folders, checkboxes)
+            helper.toggleFrameOn(self.checkboxesFrame, self.buttonsFrame, mpaths.mods_dir, mpaths.mods_folders, mpaths.patreon_mods, checkboxes)
             print("→ Done!")
             print("-------------------------------------------------")
             print("→ Remember to use dota2patcher and patch gameinfo")

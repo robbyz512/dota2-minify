@@ -1,6 +1,6 @@
-Turns all trees to small green square bushes
+Turns all trees to small circle bushes
 
-- ONLY works on default terrain you cannot use a custom terrain like desert, immortal gardens..etc 
-- shows juke paths and improves GPU performance since these trees don't use as much geometry as default ones.
+- ONLY works on default terrain and Sanctum of the Divine
+- shows juke paths and improves GPU performance since these trees use far less geometry then original ones.
 
 I plan to add tree mod to all maps in the future.

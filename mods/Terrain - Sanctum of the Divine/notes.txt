@@ -1,0 +1,5 @@
+Lets you play with Sanctum of the Divine terrain but have Minify mods applied to it (Dark Terrain + Remove Foilage + Tree Mod + Ink Shader + Misc Optimization) The result is a very minimal, clean and high performance terrain. 
+
+To preview this terrain click the Discord button below and go to #mods channel
+
+To use this mod have default terrain equipped. In dota2 go to Store tab then Browse>World>Terrain and unequip any custom terrain.

@@ -7,11 +7,12 @@ import urllib.error
 from urllib.request import urlopen
 
 workshop_installed = False
+patreon_enabled = None
 
 # ---------------------------------------------------------------------------- #
 #                                   Warnings                                   #
 # ---------------------------------------------------------------------------- #
-# Output can be passed  here to display as warnings at the end of patching.
+# Output can be passed here to display as warnings at the end of patching.
 
 warnings = []
 
@@ -44,10 +45,36 @@ def patchGameInfo(gameinfo_dir):
                 with open(gameinfo_dir, "w") as file:
                     file.writelines(contents)
                 break
+
+def patchPlayXML(build_dir):
+    data = []
+    path = os.path.join(build_dir, 'panorama\\layout')
+    url = "https://raw.githubusercontent.com/SteamDatabase/GameTracking-Dota2/master/game/dota/pak01_dir/panorama/layout/play.xml"
+
+    for line in urlopen(url):
+        line = line.decode('utf-8').strip()
+
+        if '#DOTA_VAC_Verification_Header' in line:
+            new_line = line.replace('title', 'body').replace('#DOTA_VAC_Verification_Header', 'Minify')
+            data.append(new_line)
+            continue
+
+        if '#dota_play_disabled_local_mods' in line:
+            new_line = line.replace('#dota_play_disabled_local_mods', 'Gameinfo outdated. Close Dota2 and patch gameinfo with dota2patcher.')
+            data.append(new_line)
+            continue
+
+        data.append(line)
+
+    if not os.path.exists(path): os.makedirs(path)
+        
+    with open(os.path.join(path, 'play.xml'), 'w') as file:
+        for line in data:
+            file.write(line)
 # ---------------------------------------------------------------------------- #
 #                                   GUI                                        #
 # ---------------------------------------------------------------------------- #
-# when you add new arguments to bind in tkinter event must be the last parameter.
+# when you add new arguments to bind function tkinter seems to expect event as the last argument.
 def modLabelColorConfig(widget, color, event):
     widget.configure(foreground=color)
 
@@ -77,7 +104,21 @@ def disableWorkshopMods(mods_dir, mods_folders, checkboxes):
                 if os.stat(styling_txt).st_size != 0:
                     box.configure(state='disable')
 
-def toggleFrameOn(frame_checkbox, frame_buttons, mods_dir, mods_folders, checkboxes):
+# this has become a mess with redundant loops and individual checks
+# next version will be focused on refactoring into a state machine
+
+def isSanctumChecked(checkboxes):
+    for box in checkboxes:
+        if box.var.get() == 1 and checkboxes[box] == 'Terrain - Sanctum of the Divine':
+            return True
+
+def disablePatreonMods(patreon_mods, checkboxes):
+    for box in checkboxes:
+        for mod in patreon_mods:
+            if checkboxes[box] == mod:
+                box.configure(state='disable')
+
+def toggleFrameOn(frame_checkbox, frame_buttons, mods_dir, mods_folders, patreon_mods, checkboxes):
     for widget in frame_checkbox.winfo_children():
         widget.configure(state='normal')
 
@@ -89,6 +130,9 @@ def toggleFrameOn(frame_checkbox, frame_buttons, mods_dir, mods_folders, checkbo
 
     if workshop_installed == False:
         disableWorkshopMods(mods_dir, mods_folders, checkboxes)
+    
+    if patreon_enabled == False:
+        disablePatreonMods(patreon_mods, checkboxes)
 
 def toggleFrameOff(frame_checkbox, frame_buttons):
     for widget in frame_checkbox.winfo_children():
@@ -101,7 +145,7 @@ def toggleFrameOff(frame_checkbox, frame_buttons):
             widget.configure(state='disable')
 
 def getAppHeight(mods_folders):
-    height = 445
+    height = 460
 
     num_of_mods = len(mods_folders)
     i = 10

@@ -1,0 +1,3 @@
+Black outline for more detailed map and models. Check 'preview.jpg' in mods/Ink Shader 
+
+Does not lower your FPS or affect the interface such as 3rd party software like ReShade do because I created this using Steams post processing materials.

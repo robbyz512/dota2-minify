@@ -64,6 +64,7 @@ particles\world_outpost\world_outpost_radiant_ambient_debris.vpcf_c
 particles\world_outpost\world_outpost_radiant_ambient_embers.vpcf_c
 particles\world_outpost\world_outpost_radiant_ambient_light.vpcf_c
 particles\world_outpost\world_outpost_radiant_ambient_mist.vpcf_c
+
 #minified-illusions
 particles\generic_gameplay\illusion_killed_c.vpcf_c
 particles\generic_gameplay\illusion_killed_dust.vpcf_c

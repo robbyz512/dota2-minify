@@ -3,7 +3,6 @@ import winreg
 import traceback
 from urllib.request import urlopen
 
-# get steam installation from registry
 try:
     hkey = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, "SOFTWARE\WOW6432Node\Valve\Steam")
 except Exception as exception:
@@ -23,6 +22,30 @@ try:
 except:
     steam_dir = ""
 
+# when dota2 is not inside Steam folder then set new steam directory from 'dota2path_minify.txt
+# this text file is created and set by the user in validatefiles.py during startup
+if not os.path.exists(os.path.join(steam_dir, 'common\dota 2 beta\game\bin\win64\dota2.exe')):
+    documents = os.path.join(os.path.expanduser('~'), 'Documents')
+    path_file   = os.path.join(documents, 'dota2path_minify.txt')
+
+    # make sure the text file exists
+    if not os.path.exists(path_file):
+        with open(path_file,'a+') as file:
+            file.write('')
+    
+    # load the path from text file
+    with open(path_file, 'r') as file:
+        for line in file:
+            steam_dir = line.strip()
+
+# minify project paths
+minify_dir = os.getcwd()
+bin_dir = os.path.join(minify_dir, "bin")
+blank_files_dir = os.path.join(bin_dir, "blank-files")
+build_dir = os.path.join(minify_dir, "build")
+mods_dir = os.path.join(minify_dir, "mods")
+logs_dir = os.path.join(minify_dir, "logs")
+
 # configure urls remotely
 urls = []
 for line in urlopen('https://raw.githubusercontent.com/robbyz512/dota2-minify/master/bin/modpaths/urls.txt'):
@@ -36,14 +59,6 @@ help_url    = urls[3][1]
 latest_version_url = urls[4][1]
 dev_version = urls[5][1]
 
-# minify project paths
-minify_dir = os.getcwd()
-bin_dir = os.path.join(minify_dir, "bin")
-blank_files_dir = os.path.join(bin_dir, "blank-files")
-build_dir = os.path.join(minify_dir, "build")
-mods_dir = os.path.join(minify_dir, "mods")
-logs_dir = os.path.join(minify_dir, "logs")
-
 # dota2 paths
 content_dir = os.path.join(steam_dir, "steamapps\\common\\dota 2 beta\\content\\dota_addons\\minify")
 game_dir = os.path.join(steam_dir, "steamapps\\common\\dota 2 beta\\game\\dota_addons\\minify")
@@ -56,17 +71,20 @@ pak01_dir = os.path.join(steam_dir, "steamapps\\common\\dota 2 beta\\game\\dota\
 enabled_mods = ['Auto Accept Match',
                 'Dark Terrain',
                 'Default Menu Background',
-                # 'Hide Ranks',
+                'Ink Shader',
                 'Minify HUD',
                 'Minify Spells & Items',
                 'Misc Optimization',
                 'Remove Battlepass Sounds', 
                 'Remove Foilage', 
                 'Remove Pinging', 
-                'Remove Sprays', 
-                # 'Testing',
-                'Tree Mod']
+                'Remove Sprays',
+                'Terrain - Sanctum of the Divine',
+                'Tree Mod',
+                ]
+
+patreon_mods = ['Terrain - Sanctum of the Divine']
 
 mods_folders = []
-for mod in os.listdir(mods_dir): mods_folders.append(mod) 
+for mod in os.listdir(mods_dir): mods_folders.append(mod)
 mods_folders = [p for p in mods_folders if p in enabled_mods]
