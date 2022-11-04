@@ -15,6 +15,7 @@ particles\ui_mouseactions\ping_flash.vpcf_c
 particles\ui_mouseactions\ping_friendlyward.vpcf_c
 particles\ui_mouseactions\ping_friendlyward_icon.vpcf_c
 particles\ui_mouseactions\ping_friendlyward_ward.vpcf_c
+particles\ui_mouseactions\international_2022\ping_world_teehee.vpcf_c
 particles\ui_mouseactions\ping_hero_level_danger_x.vpcf_c
 particles\ui_mouseactions\ping_hero_level_ring.vpcf_c
 particles\ui_mouseactions\ping_hero_level_ring_core.vpcf_c
