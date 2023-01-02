@@ -380,5 +380,12 @@ particles\prime\hero_spawn_hero_level_6.vpcf_c
 particles\econ\events\summer_2021\summer_2021_emblem_effect.vpcf.vpcf_c
 particles\econ\events\ti10\emblem\ti10_emblem_effect.vpcf_c
 particles\econ\events\ti9\ti9_emblem_effect.vpcf_c
+particles\econ\events\fall_2022\player\fall_2022_emblem_effect_player_base.vpcf_c
+particles\econ\events\fall_2022\fall_2022_emblem_gems_player.vpcf_c
 #remove-effigy-effects
 >>particles\econ\items\effigies\status_fx_effigies
+#hud
+particles\ui\hud\aghs_status_active_scepter.vpcf_c
+particles\ui\hud\aghs_status_active_shard.vpcf_c
+particles\ui\hud\aghs_status_shard_acquired.vpcf_c
+particles\ui\hud\aghs_status_scepter_acquired.vpcf_c
