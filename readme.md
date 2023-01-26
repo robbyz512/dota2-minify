@@ -31,9 +31,9 @@
 
 <!-- [![Benchmark](https://i.imgur.com/Lglso6f.pngg)](https://www.youtube.com/watch?v=0TuS7qbgsQQ") -->
 
-Benchmark (click to play)  |  App (click to zoom)
-:-------------------------:|:-------------------------:
-[![](https://i.imgur.com/Lglso6f.pngg)](https://www.youtube.com/watch?v=0TuS7qbgsQQ")  | ![](https://i.imgur.com/BLFykM5.jpeg)
+|                               Benchmark (click to play)                               |          App (click to zoom)          |
+| :-----------------------------------------------------------------------------------: | :-----------------------------------: |
+| [![](https://i.imgur.com/Lglso6f.pngg)](https://www.youtube.com/watch?v=0TuS7qbgsQQ") | ![](https://i.imgur.com/BLFykM5.jpeg) |
 
 <hr>
 
@@ -66,22 +66,23 @@ Optional: To compile project from source [Click Here for instructions](https://g
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ABOUT THE PROJECT -->
+
 ## :books: Developing Your Own Mods
 
 ### Loading custom mods is disabled in stable branch and is under development.
 
-[The wiki](https://github.com/robbyz512/dota2-minify/wiki) will teach you the basics of working with steam files and more. 
+[The wiki](https://github.com/robbyz512/dota2-minify/wiki) will teach you the basics of working with steam files and more.
 
 Once you get comfortable with the tools you can use Minify to patch them quickly.
 
 ## :open_file_folder: Minify File Structure
 
-| Name | Description 
-| --- | --- |
-| [`Files`](https://github.com/robbyz512/dota2-minify/wiki/Minify#files) | Compiled files you want to pack (Models, Meshes, Textures...etc)
-| [`blacklist.txt`](https://github.com/robbyz512/dota2-minify/wiki/Minify#blacklisttxt) | *Paths* to files to replace with blanks so they wont appear in game (Particles, Sounds...etc)
-| [`styling.txt`](https://github.com/robbyz512/dota2-minify/wiki/Minify#stylingtxt) | Custom CSS you want to apply to the Panorama (Interfaces, Layouts, HUD's...etc)
-| `notes.txt` | Optionally include this file to have a details button beside your mod for users to read.
+| Name                                                                                  | Description                                                                                   |
+| ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| [`Files`](https://github.com/robbyz512/dota2-minify/wiki/Minify#files)                | Compiled files you want to pack (Models, Meshes, Textures...etc)                              |
+| [`blacklist.txt`](https://github.com/robbyz512/dota2-minify/wiki/Minify#blacklisttxt) | _Paths_ to files to replace with blanks so they wont appear in game (Particles, Sounds...etc) |
+| [`styling.txt`](https://github.com/robbyz512/dota2-minify/wiki/Minify#stylingtxt)     | Custom CSS you want to apply to the Panorama (Interfaces, Layouts, HUD's...etc)               |
+| `notes.txt`                                                                           | Optionally include this file to have a details button beside your mod for users to read.      |
 
 [Click here to do the Beginner Mod Tutorial](https://github.com/robbyz512/dota2-minify/wiki/Minify#create-your-first-mod-tutorial)
 
@@ -97,7 +98,9 @@ Once you get comfortable with the tools you can use Minify to patch them quickly
 <br>
 
 ## :gem: Support the Project
+
     Your pledge helps keep Minify in active development
+
 <a href="https://www.patreon.com/minify"><img style="margin-right: 10px;" src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160"></a>
 
 </div>
@@ -105,12 +108,23 @@ Once you get comfortable with the tools you can use Minify to patch them quickly
 <hr>
 
 ## :wrench: Features under development
-- ⚙️Smaller Spells & Items Mod. (Current one mods nearly every item and spell)
-- ⚙️Swapping terrain tileset with other textures
-- ⚙️Remove all cosmetic items
-- ⚙️Remove taunts/tipping/hero voice lines/anything else annoying.
-- ⚙️Upload your own main menu background
-- ⚙️Swap hero/item sounds with your own audio files.
-- ⚙️Tree mod and Dark Terrain for immortal gardens map.
+
+-   ⚙️Smaller Spells & Items Mod. (Current one mods nearly every item and spell)
+-   ⚙️Swapping terrain tileset with other textures
+-   ⚙️Remove all cosmetic items
+-   ⚙️Remove taunts/tipping/hero voice lines/anything else annoying.
+-   ⚙️Upload your own main menu background
+-   ⚙️Swap hero/item sounds with your own audio files.
+-   ⚙️Tree mod and Dark Terrain for immortal gardens map.
+
+## 🔨 Next version of Minify under development
+
+-   ⚙️Built with [Svelte](https://github.com/sveltejs/svelte) and [Pywebview](https://github.com/r0x0r/pywebview)
+-   ⚙️Much more mod specific customization
+-   ⚙️Mod plugins, mod development more intuitive
+-   Join Discord if you would like to help develop!
+
+![alt text](https://i.imgur.com/chp63hH.png)
+![alt text](https://i.imgur.com/Dn4hD69.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
