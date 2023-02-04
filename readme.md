@@ -97,12 +97,6 @@ Once you get comfortable with the tools you can use Minify to patch them quickly
 
 <br>
 
-## :gem: Support the Project
-
-    Your pledge helps keep Minify in active development
-
-<a href="https://www.patreon.com/minify"><img style="margin-right: 10px;" src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160"></a>
-
 </div>
 
 <hr>
