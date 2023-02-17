@@ -31,8 +31,8 @@
 
 <!-- [![Benchmark](https://i.imgur.com/Lglso6f.pngg)](https://www.youtube.com/watch?v=0TuS7qbgsQQ") -->
 
-|                               Benchmark (click to play)                               |          App (click to zoom)          |
-| :-----------------------------------------------------------------------------------: | :-----------------------------------: |
+|                               Benchmark (click to play)                               |         App (click to zoom)          |
+| :-----------------------------------------------------------------------------------: | :----------------------------------: |
 | [![](https://i.imgur.com/Lglso6f.pngg)](https://www.youtube.com/watch?v=0TuS7qbgsQQ") | ![](https://i.imgur.com/brFM4HX.jpg) |
 
 <hr>

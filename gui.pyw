@@ -258,7 +258,7 @@ class App():
             helper.cleanFolders(mpaths.build_dir, mpaths.logs_dir, mpaths.content_dir, mpaths.game_dir, mpaths.minify_dir)
 
             # patch playXML warning
-            helper.patchPlayXML(mpaths.build_dir)
+            # helper.patchPlayXML(mpaths.build_dir)
 
             styling_dictionary = {}
             # blacklist_dictionary = {}
