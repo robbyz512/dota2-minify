@@ -1,3 +1,5 @@
+# I've moved on to other projects so this repo is now archived but will stay up for research and reference purposes
+
 <!-- PROJECT LOGO -->
 <h1 align="center">
   <a href="http://www.amitmerchant.com/electron-markdownify"><img src="bin/images/logo.png" alt="Markdownify" width="150"></a>
@@ -19,7 +21,6 @@
   <span>✔️7,000+ mods •</span>
   <span>✔️Boost FPS •</span>
   <span>✔️Creator Toolkit •</span>
-  <span>✔️Active Development</span>
 </p>
 
 <p align="center">
@@ -100,25 +101,5 @@ Once you get comfortable with the tools you can use Minify to patch them quickly
 </div>
 
 <hr>
-
-## :wrench: Features under development
-
--   ⚙️Smaller Spells & Items Mod. (Current one mods nearly every item and spell)
--   ⚙️Swapping terrain tileset with other textures
--   ⚙️Remove all cosmetic items
--   ⚙️Remove taunts/tipping/hero voice lines/anything else annoying.
--   ⚙️Upload your own main menu background
--   ⚙️Swap hero/item sounds with your own audio files.
--   ⚙️Tree mod and Dark Terrain for immortal gardens map.
-
-## 🔨 Next version of Minify under development
-
--   ⚙️Built with [Svelte](https://github.com/sveltejs/svelte) and [Pywebview](https://github.com/r0x0r/pywebview)
--   ⚙️Much more mod specific customization
--   ⚙️Mod plugins, mod development more intuitive
--   Join Discord if you would like to help develop!
-
-![alt text](https://i.imgur.com/chp63hH.png)
-![alt text](https://i.imgur.com/Dn4hD69.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
