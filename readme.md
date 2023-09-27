@@ -45,15 +45,15 @@
 
 <hr>
 
-Optional: If you want to manually get Decompiler.exe and libSkiaSharp.dll
+**Optional**: If you want to manually get Decompiler.exe and libSkiaSharp.dll
 
 1. Open https://github.com/SteamDatabase/ValveResourceFormat/releases
 
-2. Download "Decompiler-windows-x64.zip" (Get latest or use 0.5.0 if you have problems)
+2. Download "Decompiler-windows-x64.zip" (Get latest or use 5.0 if you have problems)
 
 3. Extract both files into Minify folder.
 
-Optional: To compile project from source [Click Here for instructions](https://github.com/robbyz512/dota2-minify/wiki/Minify#compiling-minify)
+**Optional**: To compile project from source [Click Here for instructions](https://github.com/robbyz512/dota2-minify/wiki/Minify#compiling-minify)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -93,11 +93,16 @@ Once you get comfortable with the workflow you can use Minify to easily patch la
 
 ## :fast_forward: Future of this project
 
-More customizable version of Minify in the making, big differences are each mod will have it's own configuration page letting you customize in more detail. For example adjusting textures, brightness and colors of mods like Dark Terrain and Tree Mod. Or picking spells and items to Minify. Other features would include replacing icons, music, sounds, hero voice lines, backgrounds with your own sounds and images.
+More customizable version of Minify in the making, big differences are each mod will have it's own configuration page letting you customize in more detail, some examples 
+
+- blacklisting heroes/spells/items/audio...etc
+- changing textures/tiles, brightness, colors of mods like Dark Terrain and Tree Mod. 
+- replacing icons, music, sounds, hero voice lines, backgrounds with your own sounds and images.
+- patching in custom CSS/XML into the panorama (interface) in game to always patch latest files
 
 ### For Developers:
 
-New app is being built with [Svelte](https://svelte.dev/) on the frontend and [Pywebview](https://pywebview.flowrl.com/) on the backend. I am looking for developers who'd like to help work on it. Contact me on discord or email me robattila128@gmail.com
+New app is being built with [Svelte](https://svelte.dev/) on the frontend and [Pywebview](https://pywebview.flowrl.com/) on the backend.
 
 
 <p align="center">
