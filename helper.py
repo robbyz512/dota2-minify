@@ -106,7 +106,7 @@ def getAppHeight(mods_folders):
     return height
 # ---------------------------------------------------------------------------- #
 
-def cleanFolders(build_dir, logs_dir, content_dir, game_dir, minify_dir):
+def cleanFolders(build_dir, logs_dir, content_dir, game_dir, minify_dir, dota_minify_maps):
     shutil.rmtree(build_dir, ignore_errors=True)
 
     for root, dirs, files in os.walk(logs_dir):
@@ -116,6 +116,9 @@ def cleanFolders(build_dir, logs_dir, content_dir, game_dir, minify_dir):
         for filename in files:
             os.remove(os.path.join(root, filename))
     for root, dirs, files in os.walk(game_dir):
+        for filename in files:
+            os.remove(os.path.join(root, filename))
+    for root, dirs, files in os.walk(dota_minify_maps):
         for filename in files:
             os.remove(os.path.join(root, filename))
     os.makedirs(os.path.join(minify_dir, 'build'))

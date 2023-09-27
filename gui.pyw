@@ -250,7 +250,7 @@ class App():
 
         try: 
             # clean up previous patching data
-            helper.cleanFolders(mpaths.build_dir, mpaths.logs_dir, mpaths.content_dir, mpaths.game_dir, mpaths.minify_dir)
+            helper.cleanFolders(mpaths.build_dir, mpaths.logs_dir, mpaths.content_dir, mpaths.game_dir, mpaths.minify_dir, mpaths.dota_minify_maps)
 
             styling_dictionary = {}
             # blacklist_dictionary = {}
@@ -259,8 +259,6 @@ class App():
             blank_file_extensions = helper.getBlankFileExtensions(mpaths.blank_files_dir) # list of extensions in bin/blank-files
             blacklist_data = [] # path from every blacklist.txt
             styling_data = [] # path and style from every styling.txt
-
-            map_copied = False
 
             for folder in mpaths.mods_folders:
                 try:
@@ -273,10 +271,8 @@ class App():
                         if box.var.get() == 1 and checkboxes[box] == folder: # step into folders that have ticked checkboxes only
                             print("→ Installing " + folder)
                             
-
-                            if 'Dark Terrain' in checkboxes[box] or 'Remove Foilage' and not map_copied:
+                            if checkboxes[box] == 'Dark Terrain [7.34]' or checkboxes[box] == 'Remove Foilage [7.34]':
                                 shutil.copytree(mpaths.maps_dir, os.path.join(mpaths.dota_minify, os.path.basename(mpaths.maps_dir)), dirs_exist_ok=True)
-                                map_copied = True
                             # ----------------------------------- files ---------------------------------- #
                             # if files_total == 0:    pass
                             # elif files_total == 1:  print(f"    files: Found {files_total} file")
