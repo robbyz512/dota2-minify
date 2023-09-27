@@ -7,7 +7,6 @@ import urllib.error
 from urllib.request import urlopen
 
 workshop_installed = False
-patreon_enabled = None
 
 # ---------------------------------------------------------------------------- #
 #                                   Warnings                                   #
@@ -27,50 +26,7 @@ def handleWarnings(logs_dir):
             print(f"{len(warnings)} error occured. Check logs\\warnings.txt for details.")
         elif len(warnings) >= 2:
             print(f"{len(warnings)} errors occured. Check logs\\warnings.txt for details.")
-# ---------------------------------------------------------------------------- #
-#                               Gameinfo Patcher                               #
-# ---------------------------------------------------------------------------- #
-l0 = "Game_LowViolence	dota_lv"
-l1 = "			Game				dota_minify\n"
-l2 = "			Mod				    dota_minify\n"
-
-def patchGameInfo(gameinfo_dir):
-    with open(gameinfo_dir, "r") as file:
-        contents = file.readlines()
-        for index, line in enumerate(contents):
-            if l0 in line:
-                match_index = index
-                contents.insert(match_index+1, l1)
-                contents.insert(match_index+2, l2)
-                with open(gameinfo_dir, "w") as file:
-                    file.writelines(contents)
-                break
-
-def patchPlayXML(build_dir):
-    data = []
-    path = os.path.join(build_dir, 'panorama\\layout')
-    url = "https://raw.githubusercontent.com/SteamDatabase/GameTracking-Dota2/master/game/dota/pak01_dir/panorama/layout/play.xml"
-
-    for line in urlopen(url):
-        line = line.decode('utf-8').strip()
-
-        if '#DOTA_VAC_Verification_Header' in line:
-            new_line = line.replace('title', 'body').replace('#DOTA_VAC_Verification_Header', 'Minify')
-            data.append(new_line)
-            continue
-
-        if '#dota_play_disabled_local_mods' in line:
-            new_line = line.replace('#dota_play_disabled_local_mods', 'Gameinfo outdated. Close Dota2 and patch gameinfo with dota2patcher.')
-            data.append(new_line)
-            continue
-
-        data.append(line)
-
-    if not os.path.exists(path): os.makedirs(path)
-        
-    with open(os.path.join(path, 'play.xml'), 'w') as file:
-        for line in data:
-            file.write(line)
+            
 # ---------------------------------------------------------------------------- #
 #                                   GUI                                        #
 # ---------------------------------------------------------------------------- #
@@ -79,20 +35,30 @@ def modLabelColorConfig(widget, color, event):
     widget.configure(foreground=color)
 
 def modInfo(widget, name, mod_path, event):
-
     with open(os.path.join(mod_path, 'notes.txt'), 'r') as file:
-        data = file.readlines()
-
-        # convert list to string because text= in tkinter expects a string
-        data = ''.join(data)
+        data = file.read()  # Read the entire file as a single string
 
     infoWindow = tkinter.Toplevel()
     infoWindow.title(name)
     infoWindow.iconbitmap('bin/images/info.ico')
     infoWindow.resizable(False, False)
+    window_width = infoWindow.winfo_width()
+    window_height = infoWindow.winfo_height()
+    screen_width = infoWindow.winfo_screenwidth()
+    screen_height = infoWindow.winfo_screenheight()
+    x = (screen_width - window_width) // 2
+    y = (screen_height - window_height) // 2
+    infoWindow.geometry(f"+{x}+{y}")
 
-    newtxt = tkinter.Label(infoWindow, text=data)
-    newtxt.grid(row=0, column=0, padx=5, pady=5, sticky='nsew')
+    text_widget = tkinter.Text(infoWindow, bg='#1C1F2B', fg='#fff', wrap=tkinter.WORD)
+    text_widget.grid(row=0, column=0, padx=5, pady=5, sticky='nsew')
+
+    text_widget.insert("1.0", data)
+
+    text_widget.config(state="disabled")
+
+    close_button = tkinter.Button(infoWindow, text="Close", command=infoWindow.destroy, font=("Poplar Std", 10), height=1, width=10)
+    close_button.grid(row=1, column=0, pady=5)
 
 def disableWorkshopMods(mods_dir, mods_folders, checkboxes):
     for folder in mods_folders:
@@ -104,21 +70,7 @@ def disableWorkshopMods(mods_dir, mods_folders, checkboxes):
                 if os.stat(styling_txt).st_size != 0:
                     box.configure(state='disable')
 
-# this has become a mess with redundant loops and individual checks
-# next version will be focused on refactoring into a state machine
-
-def isSanctumChecked(checkboxes):
-    for box in checkboxes:
-        if box.var.get() == 1 and checkboxes[box] == 'Terrain - Sanctum of the Divine':
-            return True
-
-def disablePatreonMods(patreon_mods, checkboxes):
-    for box in checkboxes:
-        for mod in patreon_mods:
-            if checkboxes[box] == mod:
-                box.configure(state='disable')
-
-def toggleFrameOn(frame_checkbox, frame_buttons, mods_dir, mods_folders, patreon_mods, checkboxes):
+def toggleFrameOn(frame_checkbox, frame_buttons, mods_dir, mods_folders, checkboxes):
     for widget in frame_checkbox.winfo_children():
         widget.configure(state='normal')
 
@@ -130,9 +82,6 @@ def toggleFrameOn(frame_checkbox, frame_buttons, mods_dir, mods_folders, patreon
 
     if workshop_installed == False:
         disableWorkshopMods(mods_dir, mods_folders, checkboxes)
-    
-    if patreon_enabled == False:
-        disablePatreonMods(patreon_mods, checkboxes)
 
 def toggleFrameOff(frame_checkbox, frame_buttons):
     for widget in frame_checkbox.winfo_children():
@@ -145,7 +94,7 @@ def toggleFrameOff(frame_checkbox, frame_buttons):
             widget.configure(state='disable')
 
 def getAppHeight(mods_folders):
-    height = 460
+    height = 410
 
     num_of_mods = len(mods_folders)
     i = 10

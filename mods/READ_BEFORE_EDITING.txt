@@ -1,4 +1,2 @@
-Editing files in this folder is not recommended because you are using the Stable version of Minify. 
-The Stable version is designed for patching default mods smoothly, it doesn't handle errors if you move things around.
-
-If you want to edit and create mods you can use the developer version when it's released.
+Editing files in this folder is not recommended and you should know what you are doing. 
+Eventually this project will have more user friendly customization.

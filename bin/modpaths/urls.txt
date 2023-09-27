@@ -1,6 +1,5 @@
 update_url=https://github.com/robbyz512/dota2-minify/releases
 discord_url=https://discord.gg/2YDnqpbcKM
-patreon_url=https://www.patreon.com/minify
 help_url=https://github.com/robbyz512/dota2-minify#rocket-installation
 latest_version_url=1.05b.23
 dev_version=https://github.com/robbyz512/dota2-minify#books-developing-your-own-mods

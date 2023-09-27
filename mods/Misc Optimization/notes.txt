@@ -6,5 +6,5 @@ Removes many uneeded effects from the game to improve performance, a few example
 - Simplified illusions, helps with fps drops against Naga/PL especially.
 - hero loadouts, event emblems...etc
 
-I am often updating more optimizations into the patcher so if you want to see everything go here on github.
-dota2-minify/bin/modpaths/Misc Optimization/blacklist.txt
+If you want to see full list go here.
+bin/modpaths/Misc Optimization/blacklist.txt

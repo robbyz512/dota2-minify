@@ -1,5 +1,0 @@
-Makes the entire floor dark tiles.
-
-- ONLY works on default terrain and Sanctum of Divine.
-- You can turn on "Normal Maps" in graphics settings to make the tiles look like a grid.
-- Remember to turn off grass in dota2 video settings.

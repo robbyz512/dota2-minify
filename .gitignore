@@ -1,8 +1,6 @@
 # Minify
 Decompiler.exe
 libSkiaSharp.dll
-Decompiler.exe
-libSkiaSharp.dll
 *.css
 *.vcss_c
 local

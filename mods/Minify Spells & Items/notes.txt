@@ -1,0 +1,3 @@
+Simplifies nearly every spell and item in the game, improves performance a lot and makes team fights less chaotic.
+
+* Recommended to use this with NoBling mod to removes all cosmetics, since this does not mod custom spell effects from cosmetics yet.

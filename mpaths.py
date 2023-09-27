@@ -41,10 +41,14 @@ if not os.path.exists(os.path.join(steam_dir, 'common\dota 2 beta\game\bin\win64
 # minify project paths
 minify_dir = os.getcwd()
 bin_dir = os.path.join(minify_dir, "bin")
-blank_files_dir = os.path.join(bin_dir, "blank-files")
 build_dir = os.path.join(minify_dir, "build")
-mods_dir = os.path.join(minify_dir, "mods")
 logs_dir = os.path.join(minify_dir, "logs")
+mods_dir = os.path.join(minify_dir, "mods")
+# bin
+blank_files_dir = os.path.join(bin_dir, "blank-files")
+maps_dir = os.path.join(bin_dir, "maps")
+gi_file_default = os.path.join(bin_dir, "gi_files\\default\\gameinfo_branchspecific.gi")
+gi_file_patched = os.path.join(bin_dir, "gi_files\\patched\\gameinfo_branchspecific.gi")
 
 # configure urls remotely
 urls = []
@@ -54,7 +58,6 @@ for line in urlopen('https://raw.githubusercontent.com/robbyz512/dota2-minify/ma
 
 update_url  = urls[0][1]
 discord_url = urls[1][1]
-patreon_url = urls[2][1]
 help_url    = urls[3][1]
 latest_version_url = urls[4][1]
 dev_version = urls[5][1]
@@ -62,28 +65,31 @@ dev_version = urls[5][1]
 # dota2 paths
 content_dir = os.path.join(steam_dir, "steamapps\\common\\dota 2 beta\\content\\dota_addons\\minify")
 game_dir = os.path.join(steam_dir, "steamapps\\common\\dota 2 beta\\game\\dota_addons\\minify")
-dota_minify = os.path.join(steam_dir, "steamapps\\common\\dota 2 beta\\game\\dota_minify")
+gi_dir = os.path.join(steam_dir, "steamapps\\common\\dota 2 beta\\game\\dota\\gameinfo_branchspecific.gi")
 resource_compiler = os.path.join(steam_dir, "steamapps\\common\\dota 2 beta\\game\\bin\\win64\\resourcecompiler.exe")
-gameinfo_dir = os.path.join(steam_dir, "steamapps\\common\\dota 2 beta\\game\\dota\\gameinfo.gi")
 pak01_dir = os.path.join(steam_dir, "steamapps\\common\\dota 2 beta\\game\\dota\\pak01_dir.vpk")
+
+dota_minify = os.path.join(steam_dir, "steamapps\\common\\dota 2 beta\\game\\dota_minify")
+dota_minify_maps = os.path.join(dota_minify, "maps")
 
 # exclude invalid mods
 enabled_mods = ['Auto Accept Match',
-                'Dark Terrain',
+                'Dark Terrain [7.34]',
                 'Default Menu Background',
-                'Ink Shader',
+                'Minify Base Attacks',
                 'Minify HUD',
                 'Minify Spells & Items',
                 'Misc Optimization',
+                'Remove Ambient Sounds',
                 'Remove Battlepass Sounds', 
-                'Remove Foilage', 
+                'Remove Foilage [7.34]', 
                 'Remove Pinging', 
+                'Remove River',
                 'Remove Sprays',
-                'Terrain - Sanctum of the Divine',
+                'Remove Taunt Sounds',
+                'Saiyan Mod',
                 'Tree Mod',
                 ]
-
-patreon_mods = ['Terrain - Sanctum of the Divine']
 
 mods_folders = []
 for mod in os.listdir(mods_dir): mods_folders.append(mod)

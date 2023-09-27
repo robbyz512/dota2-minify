@@ -44,27 +44,22 @@ class MyClass:
         if not os.path.exists(mpaths.dota_minify):
             os.makedirs(mpaths.dota_minify)
 
-    def d_isGameinfoPatched(self):
-        with open(mpaths.gameinfo_dir, 'r') as file:
-            if helper.l1 and helper.l2 not in file.read():
-                helper.patchGameInfo(mpaths.gameinfo_dir)
-
-    def e_isDotaRunning(self):
+    def d_isDotaRunning(self):
         if "dota2.exe" in (p.name() for p in psutil.process_iter()):
             self.toggle_flag = True
             print("Error: Please close Dota 2 and restart Minify.")
 
-    def f_isDecompilerFound(self):
+    def e_isDecompilerFound(self):
         if not os.path.exists(os.path.join(mpaths.minify_dir, 'Decompiler.exe')):
             self.toggle_flag = True
             print("Error: 'Decompiler.exe' not found, click Help for instructions.")
     
-    def g_isDllFound(self):
+    def f_isDllFound(self):
         if not os.path.exists(os.path.join(mpaths.minify_dir, 'libSkiaSharp.dll')):
             self.toggle_flag = True
             print("Error: 'libSkiaSharp.dll' not found, click Help for instructions.")
 
-    def h_isCompillerFound(self):
+    def g_isCompillerFound(self):
         if not os.path.exists(mpaths.resource_compiler):
             helper.workshop_installed == False
             print("Styling mods have been disabled.")
@@ -72,7 +67,7 @@ class MyClass:
         else:
             helper.workshop_installed = True
 
-    def i_verifyMods(self):
+    def h_verifyMods(self):
         for folder in mpaths.mods_folders:
             mod_path = os.path.join(mpaths.mods_dir, folder)
 
