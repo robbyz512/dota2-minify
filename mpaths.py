@@ -52,15 +52,15 @@ gi_file_patched = os.path.join(bin_dir, "gi_files\\patched\\gameinfo_branchspeci
 
 # configure urls remotely
 urls = []
-for line in urlopen('https://raw.githubusercontent.com/robbyz512/dota2-minify/master/bin/modpaths/urls.txt'):
+for line in urlopen('https://raw.githubusercontent.com/robbyz512/dota2-minify/1.06/bin/modpaths/urls.txt'):
     line = line.decode('utf-8').strip().split('=')
     urls.append(line)
 
 update_url  = urls[0][1]
 discord_url = urls[1][1]
-help_url    = urls[3][1]
-latest_version_url = urls[4][1]
-dev_version = urls[5][1]
+help_url    = urls[2][1]
+latest_version_url = urls[3][1]
+dev_version = urls[4][1]
 
 # dota2 paths
 content_dir = os.path.join(steam_dir, "steamapps\\common\\dota 2 beta\\content\\dota_addons\\minify")
