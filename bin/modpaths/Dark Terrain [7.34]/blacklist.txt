@@ -108,12 +108,6 @@ models\props_structures\vines_wall001.vmdl_c
 models\props_structures\vines_wall003.vmdl_c
 models\props_teams\banner_dire_small.vmdl_c
 models\props_teams\banner_radiant.vmdl_c
-models\props_teams\logo_dire_medium.vmdl_c
-models\props_teams\logo_dire_small.vmdl_c
-models\props_teams\logo_radiant_default.vmdl_c
-models\props_teams\logo_radiant_large.vmdl_c
-models\props_teams\logo_radiant_medium.vmdl_c
-models\props_teams\logo_radiant_small.vmdl_c
 models\props_wildlife\crow001.vmdl_c
 models\props_wildlife\wildlife_birdsmall003.vmdl_c
 models\props_wildlife\wildlife_birdsmall004.vmdl_c

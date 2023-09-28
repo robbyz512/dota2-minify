@@ -24,7 +24,7 @@ import mpaths
 import validatefiles
 import helper
 
-version = "1.05b.23"
+version = "1.06"
 
 # widget vars
 btnXpad = 8
@@ -146,15 +146,6 @@ class App():
         self.consoleText.grid(row=0,column=0)
         self.consoleText.configure(font=("Fixedsys"))
 
-        self.betaLabel = tk.Label(self.consoleFrame, font=("Tahoma", 10))
-        self.betaLabel.config(text="BETA testing version of 1.06, for early testing only.", fg="#ff0000")
-        self.betaLabel.grid(row=1, column=0, sticky='w')
-
-        self.betaLabel2 = tk.Label(self.consoleFrame, font=("Tahoma", 10))
-        self.betaLabel2.config(text="Delete this and download the proper 1.06 when its out.", fg="#ff0000")
-        self.betaLabel2.grid(row=2, column=0, sticky='w')
-        
-
         self.devLabel = tk.Label(self.consoleFrame, font=("Tahoma", 10))
         self.devLabel.config(text="Minify 2.0 under development", fg="#FF8C00")
         self.devLabel.grid(row=1, column=0, sticky='e')
@@ -194,23 +185,22 @@ class App():
         if helper.workshop_installed == False:
             helper.disableWorkshopMods(mpaths.mods_dir, mpaths.mods_folders, checkboxes)
 
-        self.updateBtn.config(state='disabled')
-        # if version == mpaths.latest_version_url:
-        #     self.updateBtn.config(state='disabled')
-        #     self.versionLabel.config(fg="#0cb6b3")
-        #     self.versionLabel.config(text=f"Latest version {version}")
-        #     self.updateBtnTip.text = 'You are using the latest version'
-        #     self.updateBtnTip.hover_delay = hoverDelay
-        # else:
-        #     self.updateBtn.config(state='normal', fg='#0cb6b3', activeforeground='#0cb6b3')
-        #     self.updateBtnTip.text = ''
-        #     self.updateBtnTip.hover_delay = 500000 # .text='' showing pixelated whitespace, just set hover delay to forever
+        if version == mpaths.latest_version_url:
+            self.updateBtn.config(state='disabled')
+            self.versionLabel.config(fg="#0cb6b3")
+            self.versionLabel.config(text=f"Latest version {version}")
+            self.updateBtnTip.text = 'You are using the latest version'
+            self.updateBtnTip.hover_delay = hoverDelay
+        else:
+            self.updateBtn.config(state='normal', fg='#0cb6b3', activeforeground='#0cb6b3')
+            self.updateBtnTip.text = ''
+            self.updateBtnTip.hover_delay = 500000 # .text='' showing pixelated whitespace, just set hover delay to forever
         
-        #     self.newVersionLabel.config(fg='red')
-        #     self.newVersionLabel.config(text=f"New version! {mpaths.latest_version_url}")
+            self.newVersionLabel.config(fg='red')
+            self.newVersionLabel.config(text=f"New version! {mpaths.latest_version_url}")
 
-        #     self.versionLabel.config(fg="#0cb6b3")
-        #     self.versionLabel.config(text=f"Your version {version}")
+            self.versionLabel.config(fg="#0cb6b3")
+            self.versionLabel.config(text=f"Your version {version}")
 
     def uninstaller(self):
 
