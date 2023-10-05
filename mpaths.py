@@ -76,6 +76,7 @@ dota_minify_maps = os.path.join(dota_minify, "maps")
 enabled_mods = ['Auto Accept Match',
                 'Dark Terrain [7.34]',
                 'Default Menu Background',
+                'Dotabuff in Profiles',
                 'Minify Base Attacks',
                 'Minify HUD',
                 'Minify Spells & Items',

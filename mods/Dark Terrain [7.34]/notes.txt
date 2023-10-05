@@ -10,3 +10,5 @@ Designed to make heroes and spells be as visible as possible so nothing blends i
 - Custom team logos
 - Custom shopkeepers
 - Other miscellaneous texture improvements to fit map theme
+
+Adjust brightness of your monitor or dota2 video settings if it's too dark
