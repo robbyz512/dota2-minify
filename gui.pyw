@@ -17,20 +17,18 @@ import subprocess
 import tkinter as tk
 from tkinter.messagebox import askyesno
 from functools import partial
-from idlelib.tooltip import Hovertip
 from shutil import copytree, ignore_patterns
 
 import mpaths
 import validatefiles
 import helper
 
-version = "1.06"
+version = "1.06b"
 
 # widget vars
 btnXpad = 8
 btnYpad = 8
 btnW = 8
-hoverDelay = 250
 
 patching = False
 checkboxes = {}
@@ -40,6 +38,7 @@ styling_dictionary = {}
 def welcomeMsg():
  print(r"""
  Github: https://github.com/robbyz512/dota2-minify
+ Donations: https://www.buymeacoffee.com/dota2minify
  -------------------------------------------------
        """)
 
@@ -129,7 +128,6 @@ class App():
         self.helpBtn.grid(row=10, column=1, pady=btnYpad, padx=btnXpad, sticky='w')
         self.updateBtn = tk.Button(self.buttonsFrame, text='Update', state=tk.NORMAL, width=btnW, takefocus=False, command=lambda:threading.Thread(target=helper.urlDispatcher(mpaths.update_url), daemon=True).start())
         self.updateBtn.grid(row=11, column=0, pady=btnYpad, padx=btnXpad, sticky='w')
-        self.updateBtnTip = Hovertip(self.updateBtn, text='')
         self.uninstallBtn = tk.Button(self.buttonsFrame, text='Uninstall', width=btnW, takefocus=False, command=lambda:threading.Thread(target=self.uninstaller, daemon=True).start())
         self.uninstallBtn.grid(row=11, column=1, pady=btnYpad, padx=btnXpad, sticky='w')
         self.versionLabel = tk.Label(self.buttonsFrame, font=("None", 8), width=20)
@@ -151,7 +149,7 @@ class App():
         self.devLabel.grid(row=1, column=0, sticky='e')
         self.devbtn = tk.Button(self.consoleFrame, text='Preview', width=22, height=1, font=("None", 8, "bold"), takefocus=False, command=lambda:threading.Thread(target=helper.urlDispatcher(mpaths.dev_version), daemon=True).start())
         self.devbtn.grid(row=2, column=0, sticky='e')
-
+        
         # redirects stdout and stderror to text box widget, which means print statements will not appear in the gui until these two lines are ran
         sys.stdout = TextRedirector(self.consoleText, "stdout")
         sys.stderr = TextRedirector(self.consoleText, "stderr")
@@ -188,13 +186,9 @@ class App():
         if version == mpaths.latest_version_url:
             self.updateBtn.config(state='disabled')
             self.versionLabel.config(fg="#0cb6b3")
-            self.versionLabel.config(text=f"Latest version {version}")
-            self.updateBtnTip.text = 'You are using the latest version'
-            self.updateBtnTip.hover_delay = hoverDelay
+            self.versionLabel.config(text=f"Using Latest version {version}")
         else:
             self.updateBtn.config(state='normal', fg='#0cb6b3', activeforeground='#0cb6b3')
-            self.updateBtnTip.text = ''
-            self.updateBtnTip.hover_delay = 500000 # .text='' showing pixelated whitespace, just set hover delay to forever
         
             self.newVersionLabel.config(fg='red')
             self.newVersionLabel.config(text=f"New version! {mpaths.latest_version_url}")
@@ -261,7 +255,7 @@ class App():
                         if box.var.get() == 1 and checkboxes[box] == folder: # step into folders that have ticked checkboxes only
                             print("→ Installing " + folder)
                             
-                            if checkboxes[box] == 'Dark Terrain [7.34]' or checkboxes[box] == 'Remove Foilage [7.34]':
+                            if checkboxes[box] == 'Dark Terrain [7.35]' or checkboxes[box] == 'Remove Foilage [7.35]':
                                 shutil.copytree(mpaths.maps_dir, os.path.join(mpaths.dota_minify, os.path.basename(mpaths.maps_dir)), dirs_exist_ok=True)
                             # ----------------------------------- files ---------------------------------- #
                             # if files_total == 0:    pass

@@ -22,10 +22,10 @@
 </p>
 
 <p align="center">
-    <img src="bin/images/screenshot-1.png">
-    <img src="bin/images/screenshot-2.png">
-    <img src="bin/images/screenshot-3.png">
-    <img src="bin/images/screenshot-4.png">
+    <img src="bin/images/screenshot-1.jpg">
+    <img src="bin/images/screenshot-2.jpg">
+    <img src="bin/images/screenshot-3.jpg">
+    <img src="bin/images/screenshot-4.jpg">
 </p>
 
 
@@ -37,7 +37,7 @@
 
 1. Right-click on Dota 2 in Steam and select **Properties** > **DLC** then install **"Dota 2 Workshop Tools DLC"**
 
-2. [Click here and download latest Minify(Full)](https://github.com/robbyz512/dota2-minify/releases)
+2. [Click here and download latest Minify(Full)](https://github.com/robbyz512/dota2-minify/releases) *Note Windows Defender may raise false positives you can ignore it or [click here to compile project yourself.](https://github.com/robbyz512/dota2-minify/wiki/Minify#compiling-minify)
 
 3. Extract zip file and run Minify.exe then patch.
 
@@ -53,7 +53,7 @@
 
 3. Extract both files into Minify folder.
 
-**Optional**: To compile project from source [Click Here for instructions](https://github.com/robbyz512/dota2-minify/wiki/Minify#compiling-minify)
+**Optional**: To compile project from source [Click Here for instructions](https://github.com/robbyz512/dota2-minify/wiki/Minify#compiling-minify) 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -104,11 +104,11 @@ More customizable version of Minify in the making, big differences are each mod 
 
 ### For Developers:
 
-New app is being built with [Svelte](https://svelte.dev/) on the frontend and [Pywebview](https://pywebview.flowrl.com/) on the backend.
+New app is being built with [Django](https://www.djangoproject.com/) and [Pywebview](https://pywebview.flowrl.com/) send a message on [Discord](https://discord.com/invite/2YDnqpbcKM) if you want to help.
 
 
 <p align="center">
-    <img src="bin/images/screenshot-5.png">
+    <img src="bin/images/screenshot-5.jpg">
 </p>
 
 <p align="right">(<a href="#top">back to top</a>)</p>

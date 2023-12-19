@@ -74,7 +74,7 @@ dota_minify_maps = os.path.join(dota_minify, "maps")
 
 # exclude invalid mods
 enabled_mods = ['Auto Accept Match',
-                'Dark Terrain [7.34]',
+                'Dark Terrain [7.35]',
                 'Default Menu Background',
                 'Dotabuff in Profiles',
                 'Minify Base Attacks',
@@ -83,7 +83,7 @@ enabled_mods = ['Auto Accept Match',
                 'Misc Optimization',
                 'Remove Ambient Sounds',
                 'Remove Battlepass Sounds', 
-                'Remove Foilage [7.34]', 
+                'Remove Foilage [7.35]', 
                 'Remove Pinging', 
                 'Remove River',
                 'Remove Sprays',
