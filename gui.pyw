@@ -186,7 +186,7 @@ class App():
         if version == mpaths.latest_version_url:
             self.updateBtn.config(state='disabled')
             self.versionLabel.config(fg="#0cb6b3")
-            self.versionLabel.config(text=f"Using Latest version {version}")
+            self.versionLabel.config(text=f"Latest version {version}")
         else:
             self.updateBtn.config(state='normal', fg='#0cb6b3', activeforeground='#0cb6b3')
         
