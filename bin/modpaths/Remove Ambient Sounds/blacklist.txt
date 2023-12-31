@@ -15,3 +15,4 @@ sounds\ambient\soundscapes\radiant_spawn_loop_02.vsnd_c
 sounds\ambient\soundscapes\river_light_lp_03.vsnd_c
 sounds\ambient\soundscapes\river_med_lp_01.vsnd_c
 sounds\ambient\soundscapes\waterfall_loop_01.vsnd_c
+sounds\ambient\special\brood_web_loop.vsnd_c
