@@ -19,6 +19,8 @@ particles\units\heroes\hero_arc_warden\arc_warden_base_attack_trail_glow.vpcf_c
 particles\units\heroes\hero_batrider\batrider_base_attack_explosion.vpcf_c
 particles\units\heroes\hero_batrider\batrider_base_attack_trail.vpcf_c
 particles\units\heroes\hero_batrider\batrider_base_attack_trail_e.vpcf_c
+particles\units\heroes\hero_chen\chen_base_attack_trail.vpcf_c
+particles\units\heroes\hero_chen\chen_base_attack_trail_b.vpcf_c
 particles\units\heroes\hero_clinkz\clinkz_base_attack_explosion.vpcf_c
 particles\units\heroes\hero_clinkz\clinkz_base_attack_explosion.vpcf_c
 particles\units\heroes\hero_clinkz\clinkz_base_attack_launch.vpcf_c
@@ -105,10 +107,13 @@ particles\units\heroes\hero_lion\lion_base_attack_fingera.vpcf_c
 particles\units\heroes\hero_lion\lion_base_attack_hit.vpcf_c
 particles\units\heroes\hero_lion\lion_base_attack_launch.vpcf_c
 particles\units\heroes\hero_lion\lion_base_attack_trail.vpcf_c
+particles\units\heroes\hero_lone_druid\lone_druid_base_attack_sparkle.vpcf_c
+particles\units\heroes\hero_lone_druid\lone_druid_base_attack_trail.vpcf_c
 particles\units\heroes\hero_luna\luna_base_attack_impact_flash.vpcf_c
 particles\units\heroes\hero_luna\luna_base_attack_model_ghosts.vpcf_c
 particles\units\heroes\hero_medusa\medusa_base_attack_trail.vpcf_c
 particles\units\heroes\hero_medusa\medusa_base_attack_trail2.vpcf_c
+particles\units\heroes\hero_morphling\morphling_base_attack_trail_b.vpcf_c
 particles\units\heroes\hero_necrolyte\necrolyte_base_attack_cloud.vpcf_c
 particles\units\heroes\hero_necrolyte\necrolyte_base_attack_explosion.vpcf_c
 particles\units\heroes\hero_necrolyte\necrolyte_base_attack_gas.vpcf_c
@@ -215,6 +220,8 @@ particles\units\heroes\hero_vengeful\vengeful_base_attack_fire_end.vpcf_c
 particles\units\heroes\hero_vengeful\vengeful_base_attack_orb.vpcf_c
 particles\units\heroes\hero_vengeful\vengeful_base_attack_trail.vpcf_c
 particles\units\heroes\hero_viper\viper_base_attack_drips.vpcf_c
+particles\units\heroes\hero_visage\visage_base_attack_flek.vpcf_c
+particles\units\heroes\hero_visage\visage_familiar_base_attack_flash.vpcf_c
 particles\units\heroes\hero_warlock\warlock_base_attack_explosion_b.vpcf_c
 particles\units\heroes\hero_warlock\warlock_base_attack_explosion_c.vpcf_c
 particles\units\heroes\hero_warlock\warlock_base_attack_explosion_d.vpcf_c
