@@ -1,0 +1,1 @@
+After 5 seconds automatically accepts a match when found
