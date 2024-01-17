@@ -4,6 +4,8 @@ libSkiaSharp.dll
 *.css
 *.vcss_c
 local
+bin/modpaths/urls.txt
+logs/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -41,4 +43,3 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-bin/modpaths/urls.txt
