@@ -59,6 +59,10 @@ particles\dire_fx\dire_tower002_destruction_lamp_a.vpcf_c
 particles\dire_fx\dire_tower002_destruction_lamp_c.vpcf_c
 particles\dire_fx\dire_tower002_destruction_rocks.vpcf_c
 particles\dire_fx\tower_bad_lamp.vpcf_c
+particles\items_fx\glyph_model_glow.vpcf_c
+particles\items_fx\glyph_tube.vpcf_c
+particles\items_fx\glyph_magic.vpcf_c
+particles\items_fx\glyph_creeps_base.vpcf_c
 particles\neutral_fx\miniboss_shield_conduit_parent.vpcf_c
 particles\neutral_fx\miniboss_shield_steam.vpcf_c
 particles\neutral_fx\miniboss_shield_dander.vpcf_c

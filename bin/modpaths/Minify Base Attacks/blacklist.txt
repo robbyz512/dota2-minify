@@ -1,3 +1,5 @@
+particles\base_attacks\ranged_goodguy_launch.vpcf_c
+particles\base_attacks\ranged_badguy_sparkles.vpcf_c
 particles\units\heroes\hero_ancient_apparition\ancient_apparition_base_attack_explosion.vpcf_c
 particles\units\heroes\hero_ancient_apparition\ancient_apparition_base_attack_explosion_b.vpcf_c
 particles\units\heroes\hero_ancient_apparition\ancient_apparition_base_attack_explosion_c.vpcf_c

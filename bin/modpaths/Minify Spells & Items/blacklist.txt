@@ -2021,6 +2021,8 @@ particles\units\heroes\hero_furion\furion_sprout_damage_aoe_groundcover.vpcf_c
 particles\units\heroes\hero_furion\furion_sprout_damage_aoe_torn.vpcf_c
 particles\units\heroes\hero_furion\furion_sprout_damage_dot.vpcf_c
 particles\units\heroes\hero_furion\furion_sprout_damage_leaves.vpcf_c
+particles\units\heroes\hero_furion\furion_staff_light.vpcf_c
+particles\units\heroes\hero_furion\furion_staff_beams.vpcf_c
 particles\units\heroes\hero_grimstroke\grimstroke_brush_ambient_arcs.vpcf_c
 particles\units\heroes\hero_grimstroke\grimstroke_brush_ambient_detail.vpcf_c
 particles\units\heroes\hero_grimstroke\grimstroke_brush_ambient_drip.vpcf_c
