@@ -93,14 +93,17 @@ Once you get comfortable with the workflow you can use Minify to easily patch la
 
 <hr>
 
-## :fast_forward: Future of this project
+## :fast_forward: Future of this project - Minify 2.0
 
-More customizable version of Minify in the making, big differences are each mod will have it's own configuration page letting you customize in more detail, some examples 
+- Very customziable that makes editing mods or editing anything in dota2 easy without any experience in modding. 
 
-- blacklisting heroes/spells/items/audio...etc
-- changing textures/tiles, brightness, colors of mods like Dark Terrain and Tree Mod. 
-- replacing icons, music, sounds, hero voice lines, backgrounds with your own sounds and images.
-- patching in custom CSS/XML into the panorama (interface) in game to always patch latest files
+- Adjust settings within Minify and instantly see changes in realtime while you are playing dota2
+
+- Builder tab to create, export and submit your mods to the community. With a dashboard to update your files at any time for your users.
+
+- Say goodbye to dealing with outdated and broken mods, Minify will recompile every file now.
+
+- Fullstack application with backend web server to create accounts and upload/share/follow each others works.
 
 ### For Developers:
 
@@ -109,6 +112,8 @@ New app is being built with [Django](https://www.djangoproject.com/) and [Pywebv
 
 <p align="center">
     <img src="bin/images/screenshot-5.jpg">
+    <img src="bin/images/screenshot-6.jpg">
+    <img src="bin/images/screenshot-7.jpg">
 </p>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
