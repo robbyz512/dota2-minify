@@ -23,7 +23,7 @@ import mpaths
 import validatefiles
 import helper
 
-version = "1.06b"
+version = "1.06c"
 
 # widget vars
 btnXpad = 8

@@ -4,7 +4,6 @@ libSkiaSharp.dll
 *.css
 *.vcss_c
 local
-bin/modpaths/urls.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
