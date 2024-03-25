@@ -3700,8 +3700,6 @@ particles\units\heroes\hero_razor\storm_lightning_01_branch_parent_01.vpcf_c
 particles\units\heroes\hero_razor\storm_lightning_01_cloud.vpcf_c
 particles\units\heroes\hero_razor\storm_lightning_01_modglow.vpcf_c
 particles\units\heroes\hero_razor\storm_lightning_01_thin.vpcf_c
-particles\units\heroes\hero_riki\riki_shard_sleeping_dart_cast_streak.vpcf_c
-particles\units\heroes\hero_riki\riki_shard_sleeping_dart_trail_smoke.vpcf_c
 particles\units\heroes\hero_riki\riki_smokebomb_b.vpcf_c
 particles\units\heroes\hero_riki\riki_smokebomb_c.vpcf_c
 particles\units\heroes\hero_riki\riki_smokebomb_d.vpcf_c
