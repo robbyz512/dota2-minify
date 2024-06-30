@@ -11,7 +11,10 @@
 # discord = robbyz
 
 import os
+import re
 import sys
+import time
+
 import vpk
 import shutil
 import psutil
@@ -98,6 +101,8 @@ class TextRedirector(object):
         self.widget.configure(state="disabled")
 
 class App():
+    success_pattern = re.compile(r'OK:\s+(\d+)\s+compiled,\s+(\d+)\s+failed,\s+(\d+)\s+skipped,\s+[\d:m]+s')
+
     def __init__(self):
         self.root = tk.Tk()
         self.root.protocol('WM_DELETE_WINDOW', self.exit)
@@ -422,13 +427,43 @@ class App():
             if helper.workshop_installed == True:
                 with open(os.path.join(mpaths.logs_dir, 'resourcecompiler.txt'), 'wb') as file:
                     print("→ Compiling")
-                    sp_compiler = subprocess.run([mpaths.resource_compiler, '-i', mpaths.content_dir + '/*', '-r'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-                    if sp_compiler.stdout != b"":
-                        file.write(sp_compiler.stdout)
-                    
-                    if sp_compiler.stderr != b"":
-                        decoded_err = sp_compiler.stderr.decode("utf-8")
-                        raise Exception(decoded_err)
+
+                    process = subprocess.Popen([mpaths.resource_compiler, '-i', mpaths.content_dir + '/*', '-r'],
+                                               stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+                    finished_message_detected = False
+                    compiled, failed, skipped = 0, 0, 0
+
+                    while True:
+                        stripped_output = process.stdout.readline().strip()
+                        if stripped_output:
+                            file.write(stripped_output.encode("utf-8"))
+
+                            match = self.success_pattern.search(stripped_output)
+                            if match:
+                                compiled, failed, skipped = map(int, match.groups())
+                                print(stripped_output)
+                                finished_message_detected = True
+
+                        if finished_message_detected and set(stripped_output) == {'-'}:
+                            break
+
+                    if failed:
+                        error_output = []
+                        for line in process.stderr:
+                            error_output.append(line.strip())
+
+                        if error_output:
+                            error_message = "\n".join(
+                                error_output) if error_output else "Compilation did not complete successfully."
+                            raise Exception(error_message)
+                        if failed:
+                            raise Exception(f"Failed to compile {failed} file(s)")
+
+                    # Terminate the process if it hasn't exited yet
+                    if process.poll() is None:
+                        process.terminate()
+
             # ---------------------------------- STEP 6 ---------------------------------- #
             # -------- Create VPK from game folder and save into Minify directory -------- #
             # ---------------------------------------------------------------------------- #
