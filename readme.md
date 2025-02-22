@@ -1,4 +1,8 @@
-<h1>I've moved on to other projects so this repo is now archived but will stay up for research and reference purposes.</h1>
+# I've moved on to other projects. 
+
+## Minify is now being continued by a new team 
+
+You can find their work here: [Egezenn/dota2-minify](https://github.com/Egezenn/dota2-minify) 
 
 <!-- PROJECT LOGO -->
 <h1 align="center">
