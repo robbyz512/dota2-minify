@@ -1,8 +1,9 @@
-# I've moved on to other projects. 
+# ⚠️ NOTICE: Minify Has a New Maintainer ⚠️
 
-## Minify is now being continued by a new team 
+I've **moved on to other projects** and am **no longer maintaining Minify**.
 
-You can find their work here: [Egezenn/dota2-minify](https://github.com/Egezenn/dota2-minify) 
+You can find their work here:  
+🔗 **[Egezenn/dota2-minify](https://github.com/Egezenn/dota2-minify)**
 
 <!-- PROJECT LOGO -->
 <h1 align="center">
@@ -44,45 +45,12 @@ And no one has ever been banned for mods. This project strictly deals with mods 
 
 ## :rocket: Installation
 
-1. **Download Minify**
+# ⚠️ NOTICE: Minify Has a New Maintainer ⚠️
 
-    - [Click here to download the latest Minify release](https://github.com/robbyz512/dota2-minify/releases)
+I've **moved on to other projects** and am **no longer maintaining Minify**.
 
-2. **(Optional) Install Dota 2 Workshop Tools DLC**
-
-    - These tools enable HUD/Interface mods. **Skip this step if you don't need them.**
-    - Right-click on Dota 2 in Steam.
-    - Select **Properties** > **DLC**.
-    - Install **"Dota 2 Workshop Tools DLC"**.
-
-3. **Run Minify**
-
-    - Extract the ZIP file.
-    - Run `Minify.exe` and patch the mods you want.
-
-4. **Set Language for Steam**
-    - Right-click on Dota2 in Steam and click **Properties**.
-    - **For English Dota2:** Add `-language minify` to your launch options. [See example image](https://i.imgur.com/KTfqXUg.jpeg).
-    - **For Other Languages:** Follow the [instructions here](https://github.com/robbyz512/dota2-minify/wiki/Minify#using-minify-with-a-different-language-in-dota2).
-
-5. **Start Dota 2**
-
-    - Launch Dota 2 and enjoy! :v:
-
-
-<hr>
-
-### Optional Setup
-
-**Compile from Source**: If you prefer compiling the project yourself [Click here for instructions](https://github.com/robbyz512/dota2-minify/wiki/Minify#compiling-minify)
-
-**External Binaries**: To get these files from the source `Decompiler.exe` and `libSkiaSharp.dll`:
-
-1. [Click here to go to SteamDatabase/ValveResourceFormat releases](https://github.com/SteamDatabase/ValveResourceFormat/releases)
-
-2. Download `Decompiler-windows-x64.zip`
-
-3. Extract both files into your Minify folder.
+You can find their work here:  
+🔗 **[Egezenn/dota2-minify](https://github.com/Egezenn/dota2-minify)**
 
 <!-- ABOUT THE PROJECT -->
 
